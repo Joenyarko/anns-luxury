@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Luxury Design System for Anns Luxurious Apartments
+All colors MUST be HSL. Gold and white luxury theme.
 */
 
 @layer base {
   :root {
+    /* Luxury color palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary gold colors */
+    --primary: 45 100% 51%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 45 100% 45%;
+    --primary-light: 45 100% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary neutral colors */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 90%;
+    --input: 0 0% 100%;
+    --ring: 45 100% 51%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Luxury gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(45 100% 51%) 0%, hsl(45 100% 65%) 50%, hsl(45 100% 45%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(45 100% 51% / 0.9) 0%, hsl(45 100% 45% / 0.8) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+
+    /* Luxury shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(45 100% 51% / 0.25);
+    --shadow-elegant: 0 10px 25px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
+    --shadow-gold: 0 0 30px hsl(45 100% 51% / 0.3);
+
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+
+    /* Transitions */
+    --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +123,52 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .luxury-gradient {
+    background: var(--gradient-primary);
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .transition-luxury {
+    transition: var(--transition-luxury);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
   }
 }
