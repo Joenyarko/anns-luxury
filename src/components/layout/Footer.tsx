@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from "lucide-react"
-import annsLogo from "@/assets/anns-logo.png"
+import annLogo from "@/assets/ann-logo.png"
 
 const Footer = () => {
   return (
@@ -9,7 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo & Description */}
           <div className="col-span-1 md:col-span-2">
-            <img src={annsLogo} alt="Anns Luxurious Apartments" className="h-12 w-auto mb-4 brightness-0 invert" />
+            <div className="mb-8">
+              <img src={annLogo} alt="Anns Luxurious Apartments" className="h-24 w-auto mb-0 drop-shadow-lg" />
+            </div>
             <p className="text-muted-foreground mb-6 max-w-md">
               Experience luxury living redefined. Our premium serviced apartments offer unparalleled comfort, 
               sophisticated design, and exceptional service in prime locations.
@@ -32,10 +34,9 @@ const Footer = () => {
             <h3 className="font-display text-lg font-semibold mb-4 text-primary">Quick Links</h3>
             <nav className="flex flex-col space-y-3">
               <Link to="/" className="text-muted-foreground hover:text-background transition-smooth">Home</Link>
-              <Link to="/apartments" className="text-muted-foreground hover:text-background transition-smooth">Apartments</Link>
               <Link to="/about" className="text-muted-foreground hover:text-background transition-smooth">About Us</Link>
               <Link to="/contact" className="text-muted-foreground hover:text-background transition-smooth">Contact</Link>
-              <Link to="/booking" className="text-muted-foreground hover:text-background transition-smooth">Book Now</Link>
+              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-background transition-smooth">Book via WhatsApp</a>
             </nav>
           </div>
 

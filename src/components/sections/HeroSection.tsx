@@ -1,95 +1,112 @@
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Calendar, Users, MapPin } from "lucide-react"
 import { Link } from "react-router-dom"
 import heroApartment from "@/assets/hero-apartment.jpg"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { cn } from "@/lib/utils"
+
+const carouselImages = [
+  heroApartment,
+  "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1600&h=900&fit=crop",
+  "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&h=900&fit=crop",
+  "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&h=900&fit=crop"
+]
 
 const HeroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % carouselImages.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1))
+  }
+
+  const scrollToDetails = () => {
+    const section = document.getElementById('apartment-details')
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={heroApartment} 
-          alt="Luxury Apartment Interior" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 hero-gradient" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-[100px] lg:pt-[120px]">
+      {/* Row 3: Full Width Carousel Background */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {carouselImages.map((img, index) => (
+          <div
+            key={index}
+            className={cn(
+              "absolute inset-0 transition-opacity duration-1000",
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            )}
+          >
+            <img 
+              src={img} 
+              alt={`Luxury Apartment view ${index + 1}`} 
+              className="w-full h-full object-cover" 
+            />
+            {/* Strengthened dark overlay for maximum legibility */}
+            <div className="absolute inset-0 bg-black/80" />
+          </div>
+        ))}
       </div>
 
-      {/* Content */}
+      {/* Content Overlay */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto animate-fade-in">
-          <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Luxury Living
-            <span className="block text-primary">Redefined</span>
+          <div className="inline-block px-5 py-2 bg-primary/20 border border-primary/30 rounded-full mb-8 backdrop-blur-sm">
+            <span className="text-primary font-bold text-xs tracking-[0.2em] uppercase">Private Executive Suite</span>
+          </div>
+          
+          <h1 className="font-display text-4xl md:text-7xl lg:text-9xl font-black mb-8 leading-[1.1]">
+            <span className="text-primary">Luxury</span> Living<br />
+            <span className="italic font-light opacity-90">Redefined.</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Experience premium serviced apartments with exceptional amenities, 
-            sophisticated design, and unparalleled service in prime locations.
+          
+          <p className="text-lg md:text-xl lg:text-2xl mb-12 text-white/80 leading-relaxed max-w-2xl mx-auto">
+            Experience the pinnacle of comfort in our premium serviced apartment. 
+            Professional, safe, and tailored to your specific needs.
           </p>
           
-          {/* Quick Booking Form */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-4xl mx-auto shadow-luxury animate-slide-up">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
-              <div className="text-left">
-                <label className="block text-sm font-medium mb-2 text-white/80">Check-in</label>
-                <div className="relative">
-                  <Calendar className="absolute left-3 top-3 h-5 w-5 text-primary" />
-                  <input 
-                    type="date" 
-                    className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary"
-                  />
-                </div>
-              </div>
-              
-              <div className="text-left">
-                <label className="block text-sm font-medium mb-2 text-white/80">Check-out</label>
-                <div className="relative">
-                  <Calendar className="absolute left-3 top-3 h-5 w-5 text-primary" />
-                  <input 
-                    type="date" 
-                    className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-primary focus:border-primary"
-                  />
-                </div>
-              </div>
-              
-              <div className="text-left">
-                <label className="block text-sm font-medium mb-2 text-white/80">Guests</label>
-                <div className="relative">
-                  <Users className="absolute left-3 top-3 h-5 w-5 text-primary" />
-                  <select className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:ring-2 focus:ring-primary focus:border-primary">
-                    <option value="1">1 Guest</option>
-                    <option value="2">2 Guests</option>
-                    <option value="3">3 Guests</option>
-                    <option value="4">4+ Guests</option>
-                  </select>
-                </div>
-              </div>
-              
-              <Button variant="hero" size="lg" asChild className="h-12">
-                <Link to="/apartments">
-                  Search Apartments
-                </Link>
-              </Button>
-            </div>
-          </div>
-
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in">
-            <Button variant="luxury" size="xl" asChild>
-              <Link to="/apartments">Explore Apartments</Link>
+          <div className="flex flex-col sm:flex-row gap-5 items-center justify-center animate-scale-in">
+            <Button variant="luxury" size="xl" asChild className="w-full sm:w-auto h-16 px-12 text-lg rounded-full shadow-gold">
+               <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Call Now</a>
             </Button>
-            <Button variant="elegant" size="xl" asChild>
-              <Link to="/about">Learn More</Link>
+            <Button variant="default" size="xl" onClick={scrollToDetails} className="w-full sm:w-auto h-16 px-12 text-lg rounded-full bg-white text-black hover:bg-white/90 hover:scale-105 transition-all shadow-lg">
+              Book Now
             </Button>
           </div>
         </div>
       </div>
 
+      {/* Carousel Dots */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
+        {carouselImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={cn(
+              "w-2.5 h-2.5 rounded-full transition-all duration-300",
+              index === currentSlide ? "bg-primary w-8" : "bg-white/40"
+            )}
+          />
+        ))}
+      </div>
+
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/60 rounded-full mt-2"></div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20 cursor-pointer hidden sm:block" onClick={scrollToDetails}>
+        <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/30 rounded-full mt-2"></div>
         </div>
       </div>
     </section>

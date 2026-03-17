@@ -54,25 +54,6 @@ const WhyChooseUs = () => {
           ))}
         </div>
 
-        {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-          <div className="animate-scale-in">
-            <div className="font-display text-4xl font-bold text-primary mb-2">500+</div>
-            <div className="text-muted-foreground">Happy Guests</div>
-          </div>
-          <div className="animate-scale-in" style={{animationDelay: '0.1s'}}>
-            <div className="font-display text-4xl font-bold text-primary mb-2">50+</div>
-            <div className="text-muted-foreground">Luxury Apartments</div>
-          </div>
-          <div className="animate-scale-in" style={{animationDelay: '0.2s'}}>
-            <div className="font-display text-4xl font-bold text-primary mb-2">4.9</div>
-            <div className="text-muted-foreground">Average Rating</div>
-          </div>
-          <div className="animate-scale-in" style={{animationDelay: '0.3s'}}>
-            <div className="font-display text-4xl font-bold text-primary mb-2">24/7</div>
-            <div className="text-muted-foreground">Concierge Service</div>
-          </div>
-        </div>
       </div>
     </section>
   )

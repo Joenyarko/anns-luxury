@@ -1,7 +1,8 @@
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import HeroSection from "@/components/sections/HeroSection"
-import FeaturedApartments from "@/components/sections/FeaturedApartments"
+import StatsSection from "@/components/sections/StatsSection"
+import ApartmentDetails from "@/components/sections/ApartmentDetails"
 import WhyChooseUs from "@/components/sections/WhyChooseUs"
 
 const Home = () => {
@@ -10,8 +11,9 @@ const Home = () => {
       <Header />
       <main>
         <HeroSection />
-        <FeaturedApartments />
+        <StatsSection />
         <WhyChooseUs />
+        <ApartmentDetails />
       </main>
       <Footer />
     </div>
