@@ -36,7 +36,7 @@ const Header = () => {
     ? "text-primary font-semibold"
     : (isDarkPage ? "text-white font-semibold" : "text-primary font-semibold")
 
-  const logoClass = "h-20 md:h-32 w-auto object-contain transition-all duration-300 drop-shadow-2xl"
+  const logoClass = "h-14 sm:h-16 md:h-24 lg:h-32 w-auto object-contain transition-all duration-300 drop-shadow-2xl"
 
   return (
     <header className="fixed top-0 left-0 right-0 w-full z-50">

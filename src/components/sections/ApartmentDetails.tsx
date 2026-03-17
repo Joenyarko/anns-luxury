@@ -97,8 +97,8 @@ const ApartmentDetails = () => {
 
         {/* Pricing Flexboxes */}
         <div className="mb-20 px-2 lg:px-0">
-          <h3 className="font-display text-4xl font-bold mb-12 text-center">Flexible <span className="text-primary">Stays</span></h3>
-          <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 max-w-6xl mx-auto">
+          <h3 className="font-display text-3xl md:text-4xl font-bold mb-12 text-center">Flexible <span className="text-primary">Stays</span></h3>
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 md:gap-8 max-w-6xl mx-auto">
             {pricingOptions.map((option, idx) => (
               <Card key={idx} className={cn(
                 "flex-1 flex flex-col p-8 rounded-[2rem] transition-luxury duration-500 hover:-translate-y-2",
