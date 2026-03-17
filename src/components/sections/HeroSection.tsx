@@ -62,27 +62,27 @@ const HeroSection = () => {
 
       {/* Content Overlay */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <div className="inline-block px-5 py-2 bg-primary/20 border border-primary/30 rounded-full mb-8 backdrop-blur-sm">
-            <span className="text-primary font-bold text-xs tracking-[0.2em] uppercase">Private Executive Suite</span>
+        <div className="max-w-4xl mx-auto animate-fade-in pb-20 md:pb-0">
+          <div className="inline-block px-5 py-2 bg-primary/20 border border-primary/30 rounded-full mb-6 backdrop-blur-sm">
+            <span className="text-primary font-bold text-[10px] sm:text-xs tracking-[0.2em] uppercase">Private Executive Suite</span>
           </div>
           
-          <h1 className="font-display text-4xl md:text-7xl lg:text-9xl font-black mb-8 leading-[1.1]">
+          <h1 className="font-display text-3xl md:text-7xl lg:text-9xl font-black mb-6 leading-[1.1]">
             <span className="text-primary">Luxury</span> Living<br />
-            <span className="italic font-light opacity-90">Redefined.</span>
+            <span className="italic font-light opacity-90 text-2xl md:text-5xl lg:text-7xl">Redefined.</span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl mb-12 text-white/80 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm md:text-xl lg:text-2xl mb-10 text-white/80 leading-relaxed max-w-2xl mx-auto px-4">
             Experience the pinnacle of comfort in our premium serviced apartment. 
             Professional, safe, and tailored to your specific needs.
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-5 items-center justify-center animate-scale-in">
-            <Button variant="luxury" size="xl" asChild className="w-full sm:w-auto h-16 px-12 text-lg rounded-full shadow-gold">
-               <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Call Now</a>
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center animate-scale-in">
+            <Button variant="luxury" size="xl" asChild className="w-full sm:w-auto h-14 md:h-16 px-10 text-base md:text-lg rounded-full shadow-gold">
+               <a href="https://wa.me/233543958978" target="_blank" rel="noopener noreferrer">Call Now</a>
             </Button>
-            <Button variant="default" size="xl" onClick={scrollToDetails} className="w-full sm:w-auto h-16 px-12 text-lg rounded-full bg-white text-black hover:bg-white/90 hover:scale-105 transition-all shadow-lg">
+            <Button variant="default" size="xl" onClick={scrollToDetails} className="w-full sm:w-auto h-14 md:h-16 px-10 text-base md:text-lg rounded-full bg-white text-black hover:bg-white/90 hover:scale-105 transition-all shadow-lg">
               Book Now
             </Button>
           </div>

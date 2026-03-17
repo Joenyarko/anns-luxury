@@ -10,7 +10,7 @@ const Contact = () => {
       <main className="flex-1">
         
         {/* Contact Hero */}
-        <section className="relative h-[300px] md:h-[400px] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[200px] md:h-[400px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&h=900&fit=crop" 
@@ -20,8 +20,8 @@ const Contact = () => {
             <div className="absolute inset-0 bg-black/60" />
           </div>
           <div className="relative z-10 text-center text-white px-4 animate-fade-in">
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-4">Contact Us</h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            <h1 className="font-display text-3xl md:text-6xl font-bold mb-4">Contact Us</h1>
+            <p className="text-base md:text-xl text-white/90 max-w-2xl mx-auto">
               We're here to help. Reach out to us for bookings, inquiries, or any assistance you need.
             </p>
           </div>

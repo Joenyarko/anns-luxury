@@ -72,7 +72,7 @@ const Header = () => {
         )}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-14 md:h-20 sm:h-16">
             {/* Logo with transparent background - Increased Size */}
             <div className="transition-luxury hover:scale-105">
               <Link to="/" className="flex items-center">
@@ -110,9 +110,9 @@ const Header = () => {
             </div>
 
             {/* Mobile Menu Button & Call Now */}
-            <div className="flex items-center space-x-3 lg:hidden">
-              <Button variant="luxury" size="sm" asChild className="h-9 px-4 text-xs rounded-full font-bold uppercase tracking-wider">
-                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Call Now</a>
+            <div className="flex items-center space-x-2 lg:hidden">
+              <Button variant="luxury" size="sm" asChild className="h-8 px-3 text-[10px] rounded-full font-bold uppercase tracking-wider">
+                <a href="https://wa.me/233543958978" target="_blank" rel="noopener noreferrer">Call Now</a>
               </Button>
               <button
                 className={cn("p-2 transition-colors", (isScrolled || isMenuOpen) ? "text-white" : (isDarkPage ? "text-white" : "text-gray-900"))}

@@ -9,22 +9,22 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="relative z-40 -mt-24 md:-mt-32 pb-16 lg:pb-24 px-4 overflow-visible">
+    <section className="relative z-40 -mt-12 md:-mt-32 pb-16 lg:pb-24 px-4 overflow-visible">
       <div className="container mx-auto">
-        <div className="max-w-6xl mx-auto bg-black/90 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-14 shadow-[0_30px_70px_rgba(0,0,0,0.7)] group hover:border-primary/20 transition-all duration-700">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
+        <div className="max-w-6xl mx-auto bg-black/90 backdrop-blur-3xl border border-white/10 rounded-2xl md:rounded-[3.5rem] p-6 md:p-14 shadow-[0_30px_70px_rgba(0,0,0,0.7)] group hover:border-primary/20 transition-all duration-700">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0">
             {stats.map((stat, index) => (
               <div 
                 key={index} 
                 className={cn(
-                  "flex flex-col items-center justify-center text-center py-4 px-2",
+                  "flex flex-col items-center justify-center text-center py-2 px-1 lg:px-2",
                   index !== stats.length - 1 && "lg:border-r border-white/10"
                 )}
               >
-                <div className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-primary mb-2 drop-shadow-[0_0_15px_rgba(234,179,8,0.3)] group-hover:scale-110 transition-transform duration-500">
+                <div className="font-display text-2xl md:text-6xl lg:text-7xl font-black text-primary mb-1 md:mb-2 drop-shadow-[0_0_15px_rgba(234,179,8,0.3)] group-hover:scale-110 transition-transform duration-500">
                   {stat.value}
                 </div>
-                <div className="text-white/60 text-[10px] md:text-xs uppercase tracking-[0.3em] font-black">
+                <div className="text-white/60 text-[8px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] font-black">
                   {stat.label}
                 </div>
               </div>

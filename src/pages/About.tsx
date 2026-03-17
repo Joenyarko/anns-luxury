@@ -15,7 +15,7 @@ const About = () => {
       <Header />
       <main className="flex-1">
         {/* About Hero */}
-        <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[250px] md:h-[400px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=900&fit=crop" 
@@ -25,8 +25,8 @@ const About = () => {
             <div className="absolute inset-0 bg-black/60" />
           </div>
           <div className="relative z-10 text-center text-white px-4 animate-fade-in">
-            <h1 className="font-display text-5xl md:text-6xl font-bold mb-4">About Us</h1>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            <h1 className="font-display text-3xl md:text-6xl font-bold mb-4">About Us</h1>
+            <p className="text-base md:text-xl text-white/90 max-w-2xl mx-auto">
               Setting the standard for luxury serviced apartments and redefining premium stays.
             </p>
           </div>
