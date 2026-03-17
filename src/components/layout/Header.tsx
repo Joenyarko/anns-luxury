@@ -144,7 +144,7 @@ const Header = () => {
                   key={item.name}
                   to={item.href}
                   className={cn(
-                    "text-4xl font-display font-bold transition-all text-center py-2",
+                    "text-2xl font-display font-bold transition-all text-center py-2",
                     isActive(item.href)
                       ? "text-primary"
                       : "text-white hover:text-primary"
