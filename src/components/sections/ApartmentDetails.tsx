@@ -1,6 +1,7 @@
+import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Star, Wifi, Car, Utensils, Dumbbell, PlayCircle, CalendarClock, ShieldCheck } from "lucide-react"
+import { Star, Wifi, Car, Utensils, Dumbbell, Play, Pause, Volume2, VolumeX, CalendarClock, ShieldCheck } from "lucide-react"
 import { cn } from "@/lib/utils"
 import ann1 from "@/assets/ann-1.jpg"
 import ann2 from "@/assets/ann-2.jpg"
@@ -8,6 +9,7 @@ import ann3 from "@/assets/ann-3.jpg"
 import ann4 from "@/assets/ann-4.jpg"
 import ann5 from "@/assets/ann-5.jpg"
 import ann6 from "@/assets/ann-6.jpg"
+import annsVideo from "@/assets/anns-video.MOV"
 
 const amenityIcons = {
   "High-Speed WiFi": Wifi,
@@ -29,6 +31,38 @@ const pricingOptions = [
 const galleryImages = [ann1, ann2, ann3, ann4, ann5, ann6]
 
 const ApartmentDetails = () => {
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [isMuted, setIsMuted] = useState(true)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause()
+        setIsPlaying(false)
+      } else {
+        videoRef.current.play()
+          .then(() => setIsPlaying(true))
+          .catch(() => setIsPlaying(false))
+      }
+    }
+  }
+
+  const toggleMute = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted
+      setIsMuted(!isMuted)
+    }
+  }
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      if (e.key === ' ') e.preventDefault()
+      togglePlay()
+    }
+  }
+
   return (
     <section id="apartment-details" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -63,18 +97,44 @@ const ApartmentDetails = () => {
           </div>
 
           {/* Virtual Tour Video */}
-          <div className="relative rounded-2xl md:rounded-[2rem] overflow-hidden shadow-luxury group h-[400px] md:h-[600px] bg-gray-900 flex items-center justify-center">
-            <img 
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=900&fit=crop" 
-              alt="Video Thumbnail" 
-              className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000"
+          <div
+            className="relative rounded-2xl md:rounded-[2rem] overflow-hidden shadow-luxury group h-[400px] md:h-[600px] bg-gray-900 cursor-pointer"
+            onClick={togglePlay}
+            onKeyDown={handleKeyDown}
+            tabIndex={0}
+            role="button"
+            aria-pressed={isPlaying}
+            aria-label={isPlaying ? 'Pause virtual tour' : 'Play virtual tour'}
+          >
+            <video
+              ref={videoRef}
+              src={annsVideo}
+              className="w-full h-full object-cover"
+              playsInline
+              muted={isMuted}
+              loop
             />
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500" />
-            <div className="relative z-10 flex flex-col items-center cursor-pointer hover:scale-110 transition-transform duration-500">
-              <div className="w-24 h-24 rounded-full bg-primary/90 flex items-center justify-center mb-4 shadow-gold animate-pulse">
-                <PlayCircle className="w-12 h-12 text-black" strokeWidth={2} />
+            {/* Overlay */}
+            <div className={cn(
+              "absolute inset-0 bg-black/40 transition-opacity duration-500 flex items-center justify-center",
+              isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"
+            )}>
+              <div className="flex flex-col items-center gap-3">
+                <div className="w-24 h-24 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 flex items-center justify-center text-primary transition-transform duration-300 group-hover:scale-110">
+                  {isPlaying ? <Pause size={40} fill="currentColor" /> : <Play size={40} className="ml-1" fill="currentColor" />}
+                </div>
+                {!isPlaying && <span className="text-white font-black tracking-[0.2em] uppercase text-sm md:text-base">Experience Virtual Tour</span>}
               </div>
-              <span className="text-white font-black tracking-[0.2em] uppercase text-sm md:text-base">Experience Virtual Tour</span>
+            </div>
+            {/* Sound toggle */}
+            <div className="absolute bottom-6 right-6 z-20">
+              <button
+                onClick={toggleMute}
+                className="p-3 rounded-full bg-black/40 backdrop-blur-md border border-white/10 text-white hover:bg-primary/20 hover:text-primary transition-colors"
+                title={isMuted ? 'Unmute' : 'Mute'}
+              >
+                {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+              </button>
             </div>
           </div>
         </div>

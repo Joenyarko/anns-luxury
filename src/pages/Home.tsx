@@ -4,7 +4,6 @@ import HeroSection from "@/components/sections/HeroSection"
 import StatsSection from "@/components/sections/StatsSection"
 import ApartmentDetails from "@/components/sections/ApartmentDetails"
 import WhyChooseUs from "@/components/sections/WhyChooseUs"
-import VideoSection from "@/components/sections/VideoSection"
 
 const Home = () => {
   return (
@@ -12,7 +11,6 @@ const Home = () => {
       <Header />
       <main>
         <HeroSection />
-        <VideoSection />
         <StatsSection />
         <WhyChooseUs />
         <ApartmentDetails />
@@ -22,4 +20,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home
