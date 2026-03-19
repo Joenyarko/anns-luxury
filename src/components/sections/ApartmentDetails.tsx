@@ -98,7 +98,7 @@ const ApartmentDetails = () => {
 
           {/* Virtual Tour Video */}
           <div
-            className="relative rounded-2xl md:rounded-[2rem] overflow-hidden shadow-luxury group bg-gray-900 cursor-pointer"
+            className="relative rounded-2xl md:rounded-[2rem] overflow-hidden shadow-luxury group h-[450px] md:h-[650px] bg-gray-900 cursor-pointer"
             onClick={togglePlay}
             onKeyDown={handleKeyDown}
             tabIndex={0}
@@ -109,7 +109,7 @@ const ApartmentDetails = () => {
             <video
               ref={videoRef}
               src={annsVideo}
-              className="w-full h-auto"
+              className="w-full h-full object-cover"
               playsInline
               muted={isMuted}
               loop
