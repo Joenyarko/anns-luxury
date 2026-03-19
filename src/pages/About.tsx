@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import { CheckCircle2 } from "lucide-react"
+import anns7 from "@/assets/anns-7.jpg"
 
 const About = () => {
   const values = [
@@ -47,7 +48,7 @@ const About = () => {
               </div>
               <div className="md:w-1/2 animate-scale-in">
                 <img 
-                  src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop" 
+                  src={anns7} 
                   alt="Our Apartment" 
                   className="rounded-2xl shadow-luxury w-full"
                 />
