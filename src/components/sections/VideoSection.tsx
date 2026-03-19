@@ -12,10 +12,19 @@ const VideoSection = () => {
     if (videoRef.current) {
       if (isPlaying) {
         videoRef.current.pause()
+        setIsPlaying(false)
       } else {
         videoRef.current.play()
+          .then(() => setIsPlaying(true))
+          .catch(() => setIsPlaying(false))
       }
-      setIsPlaying(!isPlaying)
+    }
+  }
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      if (e.key === ' ') e.preventDefault()
+      togglePlay()
     }
   }
 
@@ -42,6 +51,11 @@ const VideoSection = () => {
         <div 
           className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-luxury group cursor-pointer"
           onClick={togglePlay}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+          role="button"
+          aria-pressed={isPlaying}
+          aria-label={isPlaying ? 'Pause video' : 'Play video'}
         >
           <video
             ref={videoRef}
