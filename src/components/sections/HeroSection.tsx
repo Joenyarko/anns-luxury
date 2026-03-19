@@ -62,7 +62,7 @@ const HeroSection = () => {
 
       {/* Content Overlay */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <div className="max-w-4xl mx-auto animate-fade-in pb-24 sm:pb-28 md:pb-32 lg:pb-0">
+        <div className="max-w-4xl mx-auto animate-fade-in pb-24 sm:pb-28 md:pb-32 lg:pb-32">
           <div className="inline-block px-5 py-2 bg-primary/20 border border-primary/30 rounded-full mb-6 backdrop-blur-sm">
             <span className="text-primary font-bold text-[10px] sm:text-xs md:text-sm tracking-[0.2em] uppercase">Private Executive Suite</span>
           </div>
