@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { Phone, Mail, Instagram, Facebook, Twitter, Youtube, Menu, X, ChevronRight } from "lucide-react"
+import { Phone, Mail, Menu, X, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import annLogo from "@/assets/ann-logo.png"
@@ -54,10 +54,17 @@ const Header = () => {
             </a>
           </div>
           <div className="flex items-center space-x-3 md:space-x-4">
-            <a href="#" className="hover:opacity-70 transition-opacity"><Youtube size={14} /></a>
-            <a href="#" className="hover:opacity-70 transition-opacity"><Instagram size={14} /></a>
-            <a href="#" className="hover:opacity-70 transition-opacity"><Twitter size={14} /></a>
-            <a href="#" className="hover:opacity-70 transition-opacity"><Facebook size={14} /></a>
+            <a 
+              href="https://www.tiktok.com/@annsluxapartments?_r=1&_t=ZS-94ug9NGf2rV" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-70 transition-opacity"
+              aria-label="TikTok"
+            >
+              <svg viewBox="0 0 448 512" fill="currentColor" className="w-3.5 h-3.5">
+                <path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -161,10 +168,18 @@ const Header = () => {
                   <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer">Book Now</a>
                 </Button>
                 
-                <div className="mt-12 flex justify-center space-x-8 text-white/40">
-                  <Instagram size={24} className="hover:text-primary transition-colors cursor-pointer" />
-                  <Facebook size={24} className="hover:text-primary transition-colors cursor-pointer" />
-                  <Twitter size={24} className="hover:text-primary transition-colors cursor-pointer" />
+                <div className="mt-12 flex justify-center text-white/40">
+                  <a 
+                    href="https://www.tiktok.com/@annsluxapartments?_r=1&_t=ZS-94ug9NGf2rV" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors cursor-pointer"
+                    aria-label="TikTok"
+                  >
+                    <svg viewBox="0 0 448 512" fill="currentColor" className="w-8 h-8">
+                      <path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </nav>

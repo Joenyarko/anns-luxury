@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from "lucide-react"
+import { Mail, Phone, MapPin } from "lucide-react"
 import annLogo from "@/assets/ann-logo.png"
 
 const Footer = () => {
@@ -17,14 +17,16 @@ const Footer = () => {
               sophisticated design, and exceptional service in prime locations.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-2 bg-primary/10 rounded-full hover:bg-primary/20 transition-smooth">
-                <Facebook size={20} className="text-primary" />
-              </a>
-              <a href="#" className="p-2 bg-primary/10 rounded-full hover:bg-primary/20 transition-smooth">
-                <Instagram size={20} className="text-primary" />
-              </a>
-              <a href="#" className="p-2 bg-primary/10 rounded-full hover:bg-primary/20 transition-smooth">
-                <Twitter size={20} className="text-primary" />
+              <a 
+                href="https://www.tiktok.com/@annsluxapartments?_r=1&_t=ZS-94ug9NGf2rV" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2.5 bg-primary/10 rounded-full hover:bg-primary/20 transition-smooth group"
+                aria-label="TikTok"
+              >
+                <svg viewBox="0 0 448 512" fill="currentColor" className="w-5 h-5 text-primary group-hover:scale-110 transition-transform">
+                  <path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/>
+                </svg>
               </a>
             </div>
           </div>
