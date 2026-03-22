@@ -2,12 +2,13 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"
 import heroApartment from "@/assets/hero-apartment.jpg"
+import annsHero from "@/assets/anns-hero.jpg"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const carouselImages = [
   heroApartment,
-  "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1600&h=900&fit=crop",
+  annsHero,
   "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&h=900&fit=crop",
   "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&h=900&fit=crop"
 ]

@@ -40,7 +40,7 @@ const About = () => {
               <div className="md:w-1/2 animate-slide-up">
                 <h2 className="font-display text-4xl font-bold mb-6">Our <span className="text-primary">Story</span></h2>
                 <p className="text-muted-foreground text-lg mb-4">
-                  Founded with a vision to offer an unprecedented level of comfort and luxury, Ann's Golden Stays provides an exceptional alternative to traditional hotels. Our meticulously designed apartment offers a unique blend of elegance, functionality, and convenience.
+                  Ann's Luxurious Apartments specializes in premium short-term stays, offering fully furnished, Airbnb-style accommodations designed for comfort and convenience. Founded with a vision to offer an unprecedented level of comfort and luxury, Ann's Golden Stays provides an exceptional alternative to traditional hotels. Our meticulously designed apartment offers a unique blend of elegance, functionality, and convenience.
                 </p>
                 <p className="text-muted-foreground text-lg mb-6">
                   We understand that whether you are traveling for business, relocating, or simply taking a well-deserved vacation, your accommodation plays a crucial role in your overall experience. That's why we've poured our passion into creating a space that looks stunning and feels like home.

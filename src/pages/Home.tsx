@@ -4,6 +4,7 @@ import HeroSection from "@/components/sections/HeroSection"
 import StatsSection from "@/components/sections/StatsSection"
 import ApartmentDetails from "@/components/sections/ApartmentDetails"
 import WhyChooseUs from "@/components/sections/WhyChooseUs"
+import ReviewsSection from "@/components/sections/ReviewsSection"
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <StatsSection />
         <WhyChooseUs />
         <ApartmentDetails />
+        <ReviewsSection />
       </main>
       <Footer />
     </div>
