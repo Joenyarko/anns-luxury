@@ -71,7 +71,15 @@ const ReviewsSection = () => {
                 </div>
 
                 <p className="text-muted-foreground italic text-lg mb-8 leading-relaxed">
-                  "{review.quote}"
+                  "{review.quote.split(' ').slice(0, 30).join(' ')}..."
+                  <a 
+                    href="https://www.google.com/search?q=Ann%27s+Luxurious+Apartments+Reviews" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline ml-2 text-sm not-italic font-bold inline-flex items-center"
+                  >
+                    Read more
+                  </a>
                 </p>
 
                 <div className="flex items-center space-x-4">
