@@ -6,7 +6,7 @@ const WhatsAppCTA = () => {
         target="_blank" 
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full bg-[#25D366] hover:bg-[#20ba59] shadow-xl hover:shadow-2xl text-white transform hover:scale-110 active:scale-95 transition-all duration-300 group z-10 p-2.5 md:p-3"
+        className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full bg-[#25D366] hover:bg-[#20ba59] shadow-xl hover:shadow-2xl text-white transform hover:scale-110 active:scale-95 transition-all duration-300 group z-10 p-4 md:p-5"
       >
         <svg 
           viewBox="0 0 24 24" 
