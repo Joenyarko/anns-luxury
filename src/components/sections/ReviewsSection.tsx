@@ -92,7 +92,7 @@ const ReviewsSection = () => {
                   </div>
                   <div>
                     <h4 className="font-display font-bold text-lg">{review.name}</h4>
-                    <p className="text-primary text-xs font-bold uppercase tracking-wider">{review.role}</p>
+                    {/* <p className="text-primary text-xs font-bold uppercase tracking-wider">{review.role}</p> */}
                   </div>
                 </div>
               </div>
