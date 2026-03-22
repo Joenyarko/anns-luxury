@@ -1,29 +1,32 @@
 import { Star, Quote } from "lucide-react"
 import { cn } from "@/lib/utils"
+import review1 from "@/assets/anns-review1.png"
+import review2 from "@/assets/anns-review2.png"
+import review3 from "@/assets/anns-review3.png"
 
 const reviews = [
   {
     id: 1,
-    name: "Guest Name 1",
+    name: "Emmanuel “Kay” Amoako",
     role: "Business Traveler",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
-    quote: "Place your client's testimonial here. Use this space to highlight their positive experience at Ann's Luxurious Apartments.",
+    image: review1,
+    quote: "My stay here was genuinely refreshing. The apartment felt warm and welcoming the moment I walked in - clean, cozy, and set up with everything I needed. The pool access was a sweet bonus; I ended most evenings with a quiet swim, which made the whole trip feel a bit more like a getaway. What really stood out, though, was the host. Super responsive, always just a message away, and quick to sort out anything that popped up. It made the entire stay feel smooth and stress-free.",
     rating: 5
   },
   {
     id: 2,
-    name: "Guest Name 2",
+    name: "Stephen Paamo",
     role: "Leisure Guest",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
-    quote: "Another wonderful review from a satisfied customer. Mention specific details they might have loved about the property or service.",
+    image: review2,
+    quote: "I spent four wonderful days at Ann’s apartment in Accra, and it truly felt like a home away from home. The apartment was well-equipped, offering all the essentials and more—from constant electricity to a comfortable and cozy living space. Everything I needed was available, and the overall experience was smooth and relaxing.",
     rating: 5
   },
   {
     id: 3,
-    name: "Guest Name 3",
-    role: "Family Stay",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
-    quote: "A third testimonial placeholder. This helps build trust with potential guests by showing real feedback from previous stays.",
+    name: "Abdulai Barrie",
+    role: "Conference Attendee",
+    image: review3,
+    quote: "I want to appreciate all the staff's at Ann's luxurious appartement they made our stay felt like home and we experience home. The place was worth staying as is clean, enough water, wifi, AC and more especially their transportation service as we went for a conference at the Accra international conference center they were so helpful as anything we need they try for us to be comfortable.",
     rating: 5
   }
 ]
