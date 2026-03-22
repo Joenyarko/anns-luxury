@@ -217,7 +217,7 @@ const ApartmentDetails = () => {
             Contact us directly on WhatsApp to check availability, ask questions, or secure your reservation instantly.
           </p>
           <Button variant="luxury" size="xl" asChild className="w-full sm:w-auto h-14 px-10 text-lg shadow-luxury">
-            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer">
               Book via WhatsApp
             </a>
           </Button>

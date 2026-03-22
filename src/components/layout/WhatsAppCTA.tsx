@@ -2,7 +2,7 @@ const WhatsAppCTA = () => {
   return (
     <div className="fixed bottom-6 right-4 md:bottom-10 md:right-10 z-[100] animate-fade-in flex items-center justify-center">
       <a 
-        href="https://wa.me/233543958978" 
+        href="https://wa.me/233547944813" 
         target="_blank" 
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"

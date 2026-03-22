@@ -36,7 +36,7 @@ const Footer = () => {
               <Link to="/" className="text-muted-foreground hover:text-background transition-smooth">Home</Link>
               <Link to="/about" className="text-muted-foreground hover:text-background transition-smooth">About Us</Link>
               <Link to="/contact" className="text-muted-foreground hover:text-background transition-smooth">Contact</Link>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-background transition-smooth">Book via WhatsApp</a>
+              <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-background transition-smooth">Book via WhatsApp</a>
             </nav>
           </div>
 
@@ -46,7 +46,7 @@ const Footer = () => {
             <div className="flex flex-col space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-primary" />
-                <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                <span className="text-muted-foreground">054 794 4813</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-primary" />
@@ -55,8 +55,8 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-primary" />
                 <span className="text-muted-foreground">
-                  123 Luxury Avenue<br />
-                  Premium District, City
+                  Ofankor 7 Days,<br />
+                  Golden Gate Street, Accra
                 </span>
               </div>
             </div>

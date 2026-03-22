@@ -48,8 +48,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Phone / WhatsApp</h3>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                      <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm font-medium mt-1 inline-block">
+                      <p className="text-muted-foreground">054 794 4813</p>
+                      <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm font-medium mt-1 inline-block">
                         Message us on WhatsApp
                       </a>
                     </div>
@@ -75,9 +75,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Visit our location</h3>
                       <p className="text-muted-foreground">
-                        123 Luxury Avenue<br />
-                        Premium District, City<br />
-                        Country
+                        Ofankor 7 Days,<br />
+                        Golden Gate Street, Accra
                       </p>
                     </div>
                   </div>

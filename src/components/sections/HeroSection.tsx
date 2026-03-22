@@ -80,7 +80,7 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center animate-scale-in">
             <Button variant="luxury" size="xl" asChild className="w-full sm:w-auto h-14 md:h-16 lg:h-20 px-10 md:px-12 text-base md:text-lg lg:text-xl rounded-full shadow-gold">
-               <a href="https://wa.me/233543958978" target="_blank" rel="noopener noreferrer">Call Now</a>
+               <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer">Call Now</a>
             </Button>
             <Button variant="default" size="xl" onClick={scrollToDetails} className="w-full sm:w-auto h-14 md:h-16 lg:h-20 px-10 md:px-12 text-base md:text-lg lg:text-xl rounded-full bg-white text-black hover:bg-white/90 hover:scale-105 transition-all shadow-lg">
               Book Now

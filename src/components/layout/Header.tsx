@@ -44,9 +44,9 @@ const Header = () => {
       <div className="bg-primary py-2 px-4 shadow-sm">
         <div className="container mx-auto flex justify-between items-center text-[10px] md:text-xs font-bold text-black uppercase tracking-wider">
           <div className="flex items-center space-x-4 md:space-x-6">
-            <a href="tel:+1234567890" className="flex items-center hover:opacity-70 transition-opacity">
+            <a href="tel:+233547944813" className="flex items-center hover:opacity-70 transition-opacity">
               <Phone size={14} className="mr-1.5" />
-              <span className="hidden sm:inline">+1 (234) 567-890</span>
+              <span className="hidden sm:inline">054 794 4813</span>
             </a>
             <a href="mailto:info@annsgoldenstays.com" className="flex items-center hover:opacity-70 transition-opacity">
               <Mail size={14} className="mr-1.5" />
@@ -105,14 +105,14 @@ const Header = () => {
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center space-x-4">
               <Button variant={isScrolled ? "luxury" : "default"} className={cn("rounded-full font-bold uppercase tracking-wider text-black", (isScrolled || isDarkPage) ? "bg-primary hover:bg-primary/90" : "bg-white")} asChild>
-                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">Book Now</a>
+                <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer">Book Now</a>
               </Button>
             </div>
 
             {/* Mobile Menu Button & Call Now */}
             <div className="flex items-center space-x-2 lg:hidden">
               <Button variant="luxury" size="sm" asChild className="h-8 px-3 text-[10px] rounded-full font-bold uppercase tracking-wider">
-                <a href="https://wa.me/233543958978" target="_blank" rel="noopener noreferrer">Call Now</a>
+                <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer">Call Now</a>
               </Button>
               <button
                 className={cn("p-2 transition-colors", (isScrolled || isMenuOpen) ? "text-white" : (isDarkPage ? "text-white" : "text-gray-900"))}
@@ -158,7 +158,7 @@ const Header = () => {
               
               <div className="pt-12 text-center">
                 <Button variant="luxury" size="xl" asChild className="w-full h-16 text-xl rounded-full shadow-gold uppercase tracking-[0.2em] font-black">
-                  <a href="https://wa.me/233543958978" target="_blank" rel="noopener noreferrer">Book Now</a>
+                  <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer">Book Now</a>
                 </Button>
                 
                 <div className="mt-12 flex justify-center space-x-8 text-white/40">
