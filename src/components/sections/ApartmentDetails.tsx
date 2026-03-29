@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Star, Wifi, Car, Utensils, Dumbbell, Play, Pause, Volume2, VolumeX, CalendarClock, ShieldCheck } from "lucide-react"
 import { cn } from "@/lib/utils"
 import annsVideo from "@/assets/anns-video.MOV"
-import annsVideo from "@/assets/anns-video.MOV"
 
 const amenityIcons = {
   "High-Speed WiFi": Wifi,
