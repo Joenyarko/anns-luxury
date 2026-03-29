@@ -1,14 +1,9 @@
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Star, Wifi, Car, Utensils, Dumbbell, Play, Pause, Volume2, VolumeX, CalendarClock, ShieldCheck } from "lucide-react"
 import { cn } from "@/lib/utils"
-import ann1 from "@/assets/ann-1.jpg"
-import ann2 from "@/assets/ann-2.jpg"
-import ann3 from "@/assets/ann-3.jpg"
-import ann4 from "@/assets/ann-4.jpg"
-import ann5 from "@/assets/ann-5.jpg"
-import ann6 from "@/assets/ann-6.jpg"
+import annsVideo from "@/assets/anns-video.MOV"
 import annsVideo from "@/assets/anns-video.MOV"
 
 const amenityIcons = {
@@ -28,7 +23,90 @@ const pricingOptions = [
   { term: "Monthly", price: "$4,500", description: "Best value! Enjoy luxury living long-term." }
 ]
 
-const galleryImages = [ann1, ann2, ann3, ann4, ann5, ann6]
+const categories = [
+  {
+    title: "Building & Compound",
+    images: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
+    ]
+  },
+  {
+    title: "Living Room",
+    images: [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+      "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&q=80"
+    ]
+  },
+  {
+    title: "Bedroom",
+    images: [
+      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80",
+      "https://images.unsplash.com/photo-1522771731478-44eb10c518aa?w=800&q=80",
+      "https://images.unsplash.com/photo-1505693314120-0d443867891c?w=800&q=80"
+    ]
+  },
+  {
+    title: "Kitchen",
+    images: [
+      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80",
+      "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=800&q=80",
+      "https://images.unsplash.com/photo-1556911220-e15fc29a6a52?w=800&q=80"
+    ]
+  }
+]
+
+const CategoryCarousel = ({ category }: { category: { title: string, images: string[] } }) => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % category.images.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [category.images.length])
+
+  return (
+    <div className="flex flex-col h-full group">
+      <h3 className="font-display text-xl font-semibold mb-4 text-center">{category.title}</h3>
+      <div className="relative rounded-2xl overflow-hidden shadow-elegant h-[300px] w-full cursor-pointer hover:shadow-luxury transition-shadow duration-300">
+        {category.images.map((img, idx) => (
+          <img
+            key={idx}
+            src={img}
+            alt={`${category.title} ${idx + 1}`}
+            className={cn(
+              "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
+              idx === currentSlide ? "opacity-100" : "opacity-0"
+            )}
+          />
+        ))}
+        {/* Overlay for better dot visibility */}
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+        
+        {/* Carousel Dots */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+          {category.images.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={(e) => {
+                e.stopPropagation()
+                setCurrentSlide(idx)
+              }}
+              className={cn(
+                "w-2 h-2 rounded-full transition-all duration-300",
+                idx === currentSlide ? "bg-primary w-6" : "bg-white/60 hover:bg-white"
+              )}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const ApartmentDetails = () => {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -83,16 +161,10 @@ const ApartmentDetails = () => {
 
         {/* Media Gallery - Image Grid followed by Video */}
         <div className="space-y-8 mb-16">
-          {/* Images Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryImages.map((img, idx) => (
-              <div key={idx} className="rounded-2xl overflow-hidden shadow-elegant h-[240px] md:h-[300px] group">
-                <img 
-                  src={img} 
-                  alt={`Apartment detail ${idx + 1}`} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
-                />
-              </div>
+          {/* Categorized Carousels */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categories.map((category, idx) => (
+              <CategoryCarousel key={idx} category={category} />
             ))}
           </div>
 
