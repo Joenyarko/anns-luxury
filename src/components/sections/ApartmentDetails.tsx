@@ -8,8 +8,10 @@ import annsHero from "@/assets/anns-hero.jpg"
 import anns7 from "@/assets/anns-7.jpg"
 import pergola from "@/assets/pergola.jpg"
 import transport from "@/assets/transport.jpg"
+import camera from "@/assets/camera.jpg"
 import generator from "@/assets/generator.jpg"
 import anns6 from "@/assets/ann-6.jpg"
+import AC from "@/assets/AC.jpg"
 import anns1 from "@/assets/ann-1.jpg"
 import bed1 from "@/assets/bed1.jpg"
 import bed2 from "@/assets/bed2.jpg"
@@ -29,7 +31,6 @@ const amenityIcons = {
   "High-Speed WiFi": Wifi,
   "Private Parking": Car,
   "Fully Equipped Kitchen": Utensils,
-  "Fitness Center Access": Dumbbell,
   "24/7 Security": ShieldCheck,
   "Flexible Check-in": CalendarClock
 }
@@ -50,13 +51,15 @@ const categories = [
       anns7,
       pergola,
       transport,
+      camera,
       generator
     ]
   },
   {
     title: "Living Room",
     images: [
-      anns6
+      anns6,
+      AC
     ]
   },
   {
@@ -65,7 +68,8 @@ const categories = [
       anns1,
       bed1,
       bed2,
-      ann4
+      ann4,
+      AC
     ]
   },
   {
