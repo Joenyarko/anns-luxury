@@ -4,6 +4,26 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Star, Wifi, Car, Utensils, Dumbbell, Play, Pause, Volume2, VolumeX, CalendarClock, ShieldCheck } from "lucide-react"
 import { cn } from "@/lib/utils"
 import annsVideo from "@/assets/anns-video.MOV"
+import annsHero from "@/assets/anns-hero.jpg"
+import anns7 from "@/assets/anns-7.jpg"
+import pergola from "@/assets/pergola.jpg"
+import transport from "@/assets/transport.jpg"
+import generator from "@/assets/generator.jpg"
+import anns6 from "@/assets/anns-6.jpg"
+import anns1 from "@/assets/anns-1.jpg"
+import bed1 from "@/assets/bed1.jpg"
+import bed2 from "@/assets/bed2.jpg"
+import ann4 from "@/assets/ann-4.jpg"
+import anns2 from "@/assets/anns-2.jpg"
+import cups from "@/assets/cups.jpg"
+import plates from "@/assets/plates.jpg"
+import cooker from "@/assets/cooker.jpg"
+import cutlery from "@/assets/cutlery.jpg"
+import heater from "@/assets/heater.jpg"
+import microwave from "@/assets/microwave.jpg"
+import washingmachine from "@/assets/washingmachine.jpg"
+import anns5 from "@/assets/anns-5.jpg"
+import sink from "@/assets/sink.jpg"
 
 const amenityIcons = {
   "High-Speed WiFi": Wifi,
@@ -26,33 +46,46 @@ const categories = [
   {
     title: "Building & Compound",
     images: [
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
-      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
+      annsHero,
+      anns7,
+      pergola,
+      transport,
+      generator
     ]
   },
   {
     title: "Living Room",
     images: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
-      "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=800&q=80"
+      anns6
     ]
   },
   {
     title: "Bedroom",
     images: [
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80",
-      "https://images.unsplash.com/photo-1522771731478-44eb10c518aa?w=800&q=80",
-      "https://images.unsplash.com/photo-1505693314120-0d443867891c?w=800&q=80"
+      anns1,
+      bed1,
+      bed2,
+      ann4
     ]
   },
   {
     title: "Kitchen",
     images: [
-      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80",
-      "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=800&q=80",
-      "https://images.unsplash.com/photo-1556911220-e15fc29a6a52?w=800&q=80"
+      anns2,
+      cups,
+      plates,
+      cooker,
+      cutlery,
+      heater,
+      microwave,
+      washingmachine
+    ]
+  },
+  {
+    title: "Bathroom",
+    images: [
+      anns5,
+      sink
     ]
   }
 ]
@@ -84,7 +117,7 @@ const CategoryCarousel = ({ category }: { category: { title: string, images: str
         ))}
         {/* Overlay for better dot visibility */}
         <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
-        
+
         {/* Carousel Dots */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
           {category.images.map((_, idx) => (
@@ -143,7 +176,7 @@ const ApartmentDetails = () => {
   return (
     <section id="apartment-details" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
-        
+
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
             The <span className="text-primary">Executive Suite</span>
@@ -233,8 +266,8 @@ const ApartmentDetails = () => {
             {pricingOptions.map((option, idx) => (
               <Card key={idx} className={cn(
                 "flex-1 flex flex-col p-8 rounded-[2rem] transition-luxury duration-500 hover:-translate-y-2",
-                idx === 1 
-                  ? "border-primary/50 border-2 bg-black text-white shadow-luxury scale-105 z-10" 
+                idx === 1
+                  ? "border-primary/50 border-2 bg-black text-white shadow-luxury scale-105 z-10"
                   : "bg-white border-white/10 shadow-elegant"
               )}>
                 <CardHeader className="p-0 mb-6">
@@ -265,8 +298,8 @@ const ApartmentDetails = () => {
                     "{option.description}"
                   </p>
                   <div className="mt-auto pt-6 border-t border-white/10">
-                    <Button 
-                      variant={idx === 1 ? "luxury" : "default"} 
+                    <Button
+                      variant={idx === 1 ? "luxury" : "default"}
                       className={cn(
                         "w-full h-12 rounded-full font-bold uppercase tracking-widest text-xs",
                         idx === 1 ? "" : "bg-black text-white hover:bg-black/90"
