@@ -19,8 +19,6 @@ import sofa1 from "@/assets/Anns-luxury/sofa1.jpg"
 import sofa2 from "@/assets/Anns-luxury/sofa2.jpg"
 import tv from "@/assets/Anns-luxury/tv.jpg"
 import dining from "@/assets/Anns-luxury/dining.jpg"
-import ac1 from "@/assets/Anns-luxury/AC1.jpg"
-import photo11 from "@/assets/Anns-luxury/photo_11_2026-04-10_11-38-07.jpg"
 
 import bedroom from "@/assets/Anns-luxury/bedroom.jpg"
 import bedroom1 from "@/assets/Anns-luxury/bedroom1.jpg"
@@ -28,7 +26,6 @@ import bedroom2 from "@/assets/Anns-luxury/bedroom2.jpg"
 import bedroom3 from "@/assets/Anns-luxury/bedroom3.jpg"
 import bedside from "@/assets/Anns-luxury/bedside.jpg"
 import bedside2 from "@/assets/Anns-luxury/bedside2.jpg"
-import photo38 from "@/assets/Anns-luxury/photo_38_2026-04-10_11-38-07.jpg"
 
 import kitchen from "@/assets/Anns-luxury/kitchen.jpg"
 import kitchencabinet from "@/assets/Anns-luxury/kitchencabinet.jpg"
@@ -94,9 +91,7 @@ const categories = [
       sofa1,
       sofa2,
       tv,
-      dining,
-      ac1,
-      photo11
+      dining
     ]
   },
   {
@@ -107,8 +102,7 @@ const categories = [
       bedroom2,
       bedroom3,
       bedside,
-      bedside2,
-      photo38
+      bedside2
     ]
   },
   {
