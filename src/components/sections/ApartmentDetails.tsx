@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Star, Wifi, Car, Utensils, Dumbbell, Play, Pause, Volume2, VolumeX, CalendarClock, ShieldCheck } from "lucide-react"
+import { Star, Wifi, Car, Utensils, Dumbbell, Play, Pause, Volume2, VolumeX, CalendarClock, ShieldCheck, X, ChevronLeft, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import annsVideo from "@/assets/Anns-luxury/video.MOV"
 import buildingcompound from "@/assets/Anns-luxury/buildingcompound.jpg"
@@ -51,6 +51,9 @@ import washroom3 from "@/assets/Anns-luxury/washroom3.jpg"
 import tap from "@/assets/Anns-luxury/tap.jpg"
 import tap2 from "@/assets/Anns-luxury/tap2.jpg"
 import tab3 from "@/assets/Anns-luxury/tab3.jpg"
+import acoutside from "@/assets/Anns-luxury/ACoutside.jpg"
+import kitchencabinet2 from "@/assets/Anns-luxury/kitchencabinet2.jpg"
+import kitchen3 from "@/assets/Anns-luxury/kitchen3.jpg"
 
 const amenityIcons = {
   "High-Speed WiFi": Wifi,
@@ -79,7 +82,8 @@ const categories = [
       generator,
       starlink,
       electricfence,
-      cctv
+      cctv,
+      acoutside
     ]
   },
   {
@@ -122,7 +126,9 @@ const categories = [
       washingmachine1,
       washingmachine2,
       washingmachine3,
-      washingmachine4
+      washingmachine4,
+      kitchencabinet2,
+      kitchen3
     ]
   },
   {
@@ -141,18 +147,24 @@ const categories = [
 
 const CategoryCarousel = ({ category }: { category: { title: string, images: string[] } }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false)
 
+  // Auto-sliding logic only acts when lightbox is closed
   useEffect(() => {
+    if (isLightboxOpen) return
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % category.images.length)
     }, 5000)
     return () => clearInterval(timer)
-  }, [category.images.length])
+  }, [category.images.length, isLightboxOpen])
 
   return (
     <div className="flex flex-col h-full group">
       <h3 className="font-display text-xl font-semibold mb-4 text-center">{category.title}</h3>
-      <div className="relative rounded-2xl overflow-hidden shadow-elegant h-[300px] w-full cursor-pointer hover:shadow-luxury transition-shadow duration-300">
+      <div 
+        className="relative rounded-2xl overflow-hidden shadow-elegant h-[300px] w-full cursor-pointer hover:shadow-luxury transition-shadow duration-300"
+        onClick={() => setIsLightboxOpen(true)}
+      >
         {category.images.map((img, idx) => (
           <img
             key={idx}
@@ -185,6 +197,74 @@ const CategoryCarousel = ({ category }: { category: { title: string, images: str
           ))}
         </div>
       </div>
+
+      {/* Lightbox Modal */}
+      {isLightboxOpen && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 animate-fade-in"
+          onClick={() => setIsLightboxOpen(false)}
+        >
+          {/* Close button */}
+          <button 
+            className="absolute top-6 right-6 text-white/70 hover:text-white bg-black/40 hover:bg-white/10 p-2 rounded-full transition-colors z-50"
+            onClick={(e) => { e.stopPropagation(); setIsLightboxOpen(false); }}
+            aria-label="Close Lightbox"
+          >
+            <X size={32} />
+          </button>
+          
+          {/* Previous button */}
+          <button 
+            className="absolute left-2 md:left-8 text-white/50 hover:text-white transition-colors p-2 z-50"
+            onClick={(e) => { 
+                e.stopPropagation(); 
+                setCurrentSlide((prev) => (prev - 1 + category.images.length) % category.images.length); 
+            }}
+            aria-label="Previous image"
+          >
+            <ChevronLeft size={48} />
+          </button>
+
+          {/* Current image */}
+          <div className="relative max-w-7xl max-h-[90vh] flex flex-col items-center justify-center p-4">
+             <h4 className="absolute -top-12 text-white font-display text-2xl tracking-widest uppercase opacity-80">{category.title}</h4>
+             <img 
+               src={category.images[currentSlide]} 
+               alt={`${category.title} enlarged`} 
+               className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl transition-all duration-300"
+               onClick={(e) => e.stopPropagation()} // Prevent close when clicking image
+             />
+             <div className="absolute -bottom-10 flex space-x-2 mt-4">
+                 {category.images.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      setCurrentSlide(idx)
+                    }}
+                    className={cn(
+                      "w-2 h-2 rounded-full transition-all duration-300",
+                      idx === currentSlide ? "bg-primary w-4" : "bg-white/40 hover:bg-white/80"
+                    )}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+             </div>
+          </div>
+
+          {/* Next button */}
+          <button 
+            className="absolute right-2 md:right-8 text-white/50 hover:text-white transition-colors p-2 z-50"
+            onClick={(e) => { 
+                e.stopPropagation(); 
+                setCurrentSlide((prev) => (prev + 1) % category.images.length); 
+            }}
+            aria-label="Next image"
+          >
+            <ChevronRight size={48} />
+          </button>
+        </div>
+      )}
     </div>
   )
 }
