@@ -1,6 +1,6 @@
 import { useState, useRef } from "react"
 import { Play, Pause, Volume2, VolumeX } from "lucide-react"
-import videoSrc from "@/assets/anns-video.MOV"
+import videoSrc from "@/assets/Anns-luxury/video.MOV"
 import { cn } from "@/lib/utils"
 
 const VideoSection = () => {

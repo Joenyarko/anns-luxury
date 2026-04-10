@@ -3,29 +3,54 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Star, Wifi, Car, Utensils, Dumbbell, Play, Pause, Volume2, VolumeX, CalendarClock, ShieldCheck } from "lucide-react"
 import { cn } from "@/lib/utils"
-import annsVideo from "@/assets/anns-video.MOV"
-import annsHero from "@/assets/anns-hero.jpg"
-import anns7 from "@/assets/anns-7.jpg"
-import pergola from "@/assets/pergola.jpg"
-import transport from "@/assets/transport.jpg"
-import camera from "@/assets/camera.jpg"
-import generator from "@/assets/generator.jpg"
-import anns6 from "@/assets/ann-6.jpg"
-import AC from "@/assets/AC.jpg"
-import anns1 from "@/assets/ann-1.jpg"
-import bed1 from "@/assets/bed1.jpg"
-import bed2 from "@/assets/bed2.jpg"
-import ann4 from "@/assets/ann-4.jpg"
-import anns2 from "@/assets/ann-2.jpg"
-import cups from "@/assets/cups.jpg"
-import plates from "@/assets/plates.jpg"
-import cooker from "@/assets/cooker.jpg"
-import cutlery from "@/assets/cutlery.jpg"
-import heater from "@/assets/heater.jpg"
-import microwave from "@/assets/microwave.jpg"
-import washingmachine from "@/assets/washingmachine.jpg"
-import anns5 from "@/assets/ann-5.jpg"
-import sink from "@/assets/sink.jpg"
+import annsVideo from "@/assets/Anns-luxury/video.MOV"
+import buildingcompound from "@/assets/Anns-luxury/buildingcompound.jpg"
+import environ from "@/assets/Anns-luxury/environ.jpg"
+import securitypost from "@/assets/Anns-luxury/securitypost.jpg"
+import pergola from "@/assets/Anns-luxury/pergola.jpg"
+import generator from "@/assets/Anns-luxury/generator.jpg"
+import starlink from "@/assets/Anns-luxury/starlink.jpg"
+import electricfence from "@/assets/Anns-luxury/electricfence.jpg"
+import cctv from "@/assets/Anns-luxury/cctv.jpg"
+
+import livingroom from "@/assets/Anns-luxury/livingroom.jpg"
+import sofa from "@/assets/Anns-luxury/sofa.jpg"
+import sofa1 from "@/assets/Anns-luxury/sofa1.jpg"
+import sofa2 from "@/assets/Anns-luxury/sofa2.jpg"
+import tv from "@/assets/Anns-luxury/tv.jpg"
+import dining from "@/assets/Anns-luxury/dining.jpg"
+import ac1 from "@/assets/Anns-luxury/AC1.jpg"
+import photo11 from "@/assets/Anns-luxury/photo_11_2026-04-10_11-38-07.jpg"
+
+import bedroom from "@/assets/Anns-luxury/bedroom.jpg"
+import bedroom1 from "@/assets/Anns-luxury/bedroom1.jpg"
+import bedroom2 from "@/assets/Anns-luxury/bedroom2.jpg"
+import bedroom3 from "@/assets/Anns-luxury/bedroom3.jpg"
+import bedside from "@/assets/Anns-luxury/bedside.jpg"
+import bedside2 from "@/assets/Anns-luxury/bedside2.jpg"
+import photo38 from "@/assets/Anns-luxury/photo_38_2026-04-10_11-38-07.jpg"
+
+import kitchen from "@/assets/Anns-luxury/kitchen.jpg"
+import kitchencabinet from "@/assets/Anns-luxury/kitchencabinet.jpg"
+import kitchentap from "@/assets/Anns-luxury/kitchentap.jpg"
+import kettle from "@/assets/Anns-luxury/kettle.jpg"
+import microwave from "@/assets/Anns-luxury/microwave.jpg"
+import refrigerator from "@/assets/Anns-luxury/refrigerator.jpg"
+import stove from "@/assets/Anns-luxury/stove.jpg"
+import stove2 from "@/assets/Anns-luxury/stove2.jpg"
+import washingmachine from "@/assets/Anns-luxury/washingmachine.jpg"
+import washingmachine1 from "@/assets/Anns-luxury/washingmachine1.jpg"
+import washingmachine2 from "@/assets/Anns-luxury/washingmachine2.jpg"
+import washingmachine3 from "@/assets/Anns-luxury/washingmachine3.jpg"
+import washingmachine4 from "@/assets/Anns-luxury/washingmachine4.jpg"
+
+import bathroom from "@/assets/Anns-luxury/bathroom.jpg"
+import bathroomshower from "@/assets/Anns-luxury/bathroomshower.jpg"
+import washroom from "@/assets/Anns-luxury/washroom.jpg"
+import washroom3 from "@/assets/Anns-luxury/washroom3.jpg"
+import tap from "@/assets/Anns-luxury/tap.jpg"
+import tap2 from "@/assets/Anns-luxury/tap2.jpg"
+import tab3 from "@/assets/Anns-luxury/tab3.jpg"
 
 const amenityIcons = {
   "High-Speed WiFi": Wifi,
@@ -47,49 +72,69 @@ const categories = [
   {
     title: "Building & Compound",
     images: [
-      annsHero,
-      anns7,
+      buildingcompound,
+      environ,
+      securitypost,
       pergola,
-      transport,
-      camera,
-      generator
+      generator,
+      starlink,
+      electricfence,
+      cctv
     ]
   },
   {
     title: "Living Room",
     images: [
-      anns6,
-      AC
+      livingroom,
+      sofa,
+      sofa1,
+      sofa2,
+      tv,
+      dining,
+      ac1,
+      photo11
     ]
   },
   {
     title: "Bedroom",
     images: [
-      anns1,
-      bed1,
-      bed2,
-      ann4,
-      AC
+      bedroom,
+      bedroom1,
+      bedroom2,
+      bedroom3,
+      bedside,
+      bedside2,
+      photo38
     ]
   },
   {
     title: "Kitchen",
     images: [
-      anns2,
-      cups,
-      plates,
-      cooker,
-      cutlery,
-      heater,
+      kitchen,
+      kitchencabinet,
+      kitchentap,
+      kettle,
       microwave,
-      washingmachine
+      refrigerator,
+      stove,
+      stove2,
+      washingmachine,
+      washingmachine1,
+      washingmachine2,
+      washingmachine3,
+      washingmachine4
     ]
   },
   {
     title: "Bathroom",
     images: [
-      anns5,
-      sink
+      bathroom,
+      bathroomshower,
+      washroom,
+      washroom3,
+      tap,
+      tap2,
+      tab3
     ]
   }
 ]
