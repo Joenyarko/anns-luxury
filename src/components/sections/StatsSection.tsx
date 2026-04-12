@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils"
+import bedroom from "@/assets/Anns-luxury/bedroom.jpg"
 
 const stats = [
   { value: "500+", label: "Happy guests in total" },
@@ -56,13 +57,8 @@ const StatsSection = () => {
       </div>
 
       {/* Right Side Image mapping to arcenergy layout */}
-      <div className="w-full lg:w-1/2 min-h-[400px] lg:min-h-[500px] relative bg-gray-900 overflow-hidden flex items-center justify-center">
-        {/* Replace with real image later */}
-        <div className="absolute inset-0 bg-[#040B14]/80 flex items-center justify-center z-10 backdrop-blur-sm transition-all hover:backdrop-blur-none border-l border-white/5">
-          <span className="text-white/50 tracking-[0.2em] uppercase font-bold text-xl md:text-2xl text-center px-4 mix-blend-overlay">
-            Landscape Right Image Placeholder
-          </span>
-        </div>
+      <div className="w-full lg:w-1/2 min-h-[400px] lg:min-h-[500px] relative bg-gray-900 border-t border-l-0 lg:border-t-0 lg:border-l border-white/5 overflow-hidden flex items-center justify-center">
+        <img src={bedroom} alt="Bedroom" className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-1000 hover:scale-105" />
       </div>
     </section>
   )

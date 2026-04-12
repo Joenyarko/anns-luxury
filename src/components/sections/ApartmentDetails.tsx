@@ -3,139 +3,44 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Star, Wifi, Car, Utensils, Dumbbell, Play, Pause, Volume2, VolumeX, CalendarClock, ShieldCheck, X, ChevronLeft, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
-import annsVideo from "@/assets/Anns-luxury/video.MOV"
-import buildingcompound from "@/assets/Anns-luxury/buildingcompound.jpg"
-import environ from "@/assets/Anns-luxury/environ.jpg"
-import securitypost from "@/assets/Anns-luxury/securitypost.jpg"
-import pergola from "@/assets/Anns-luxury/pergola.jpg"
-import generator from "@/assets/Anns-luxury/generator.jpg"
-import starlink from "@/assets/Anns-luxury/starlink.jpg"
-import electricfence from "@/assets/Anns-luxury/electricfence.jpg"
-import cctv from "@/assets/Anns-luxury/cctv.jpg"
+import buildingcompound from "@/assets/Anns-luxury/buildingcompound.jpg";
+import environ from "@/assets/Anns-luxury/environ.jpg";
+import generator from "@/assets/Anns-luxury/generator.jpg";
+import pergola from "@/assets/Anns-luxury/pergola.jpg";
 
-import livingroom from "@/assets/Anns-luxury/livingroom.jpg"
-import sofa from "@/assets/Anns-luxury/sofa.jpg"
-import sofa1 from "@/assets/Anns-luxury/sofa1.jpg"
-import sofa2 from "@/assets/Anns-luxury/sofa2.jpg"
-import tv from "@/assets/Anns-luxury/tv.jpg"
-import dining from "@/assets/Anns-luxury/dining.jpg"
+import livingroom from "@/assets/Anns-luxury/livingroom.jpg";
+import dining from "@/assets/Anns-luxury/dining.jpg";
 
-import bedroom from "@/assets/Anns-luxury/bedroom.jpg"
-import bedroom1 from "@/assets/Anns-luxury/bedroom1.jpg"
-import bedroom2 from "@/assets/Anns-luxury/bedroom2.jpg"
-import bedroom3 from "@/assets/Anns-luxury/bedroom3.jpg"
-import bedside from "@/assets/Anns-luxury/bedside.jpg"
-import bedside2 from "@/assets/Anns-luxury/bedside2.jpg"
+import bedroom from "@/assets/Anns-luxury/bedroom.jpg";
+import bedroom1 from "@/assets/Anns-luxury/bedroom1.jpg";
+import bedroom2 from "@/assets/Anns-luxury/bedroom2.jpg";
 
-import kitchen from "@/assets/Anns-luxury/kitchen.jpg"
-import kitchencabinet from "@/assets/Anns-luxury/kitchencabinet.jpg"
-import kitchentap from "@/assets/Anns-luxury/kitchentap.jpg"
-import kettle from "@/assets/Anns-luxury/kettle.jpg"
-import microwave from "@/assets/Anns-luxury/microwave.jpg"
-import refrigerator from "@/assets/Anns-luxury/refrigerator.jpg"
-import stove from "@/assets/Anns-luxury/stove.jpg"
-import stove2 from "@/assets/Anns-luxury/stove2.jpg"
-import washingmachine from "@/assets/Anns-luxury/washingmachine.jpg"
-import washingmachine1 from "@/assets/Anns-luxury/washingmachine1.jpg"
-import washingmachine2 from "@/assets/Anns-luxury/washingmachine2.jpg"
-import washingmachine3 from "@/assets/Anns-luxury/washingmachine3.jpg"
-import washingmachine4 from "@/assets/Anns-luxury/washingmachine4.jpg"
+import kitchen from "@/assets/Anns-luxury/kitchen.jpg";
+import microwave from "@/assets/Anns-luxury/microwave.jpg";
+import washingmachine4 from "@/assets/Anns-luxury/washingmachine4.jpg";
 
-import bathroom from "@/assets/Anns-luxury/bathroom.jpg"
-import bathroomshower from "@/assets/Anns-luxury/bathroomshower.jpg"
-import washroom from "@/assets/Anns-luxury/washroom.jpg"
-import washroom3 from "@/assets/Anns-luxury/washroom3.jpg"
-import tap from "@/assets/Anns-luxury/tap.jpg"
-import tap2 from "@/assets/Anns-luxury/tap2.jpg"
-import tab3 from "@/assets/Anns-luxury/tab3.jpg"
-import acoutside from "@/assets/Anns-luxury/ACoutside.jpg"
-import kitchencabinet2 from "@/assets/Anns-luxury/kitchencabinet2.jpg"
-import kitchen3 from "@/assets/Anns-luxury/kitchen3.jpg"
-
-const amenityIcons = {
-  "High-Speed WiFi": Wifi,
-  "Private Parking": Car,
-  "Fully Equipped Kitchen": Utensils,
-  "24/7 Security": ShieldCheck,
-  "Flexible Check-in": CalendarClock
-}
-
-const amenities = Object.keys(amenityIcons)
-
-const pricingOptions = [
-  { term: "Nightly", price: "$199", description: "Perfect for short trips and weekend getaways." },
-  { term: "Weekly", price: "$1,200", description: "Save 15% when you stay for a full week." },
-  { term: "Monthly", price: "$4,500", description: "Best value! Enjoy luxury living long-term." }
-]
+import bathroom from "@/assets/Anns-luxury/bathroom.jpg";
 
 const categories = [
   {
     title: "Building & Compound",
-    images: [
-      buildingcompound,
-      environ,
-      securitypost,
-      pergola,
-      generator,
-      starlink,
-      electricfence,
-      cctv,
-      acoutside
-    ]
+    images: [buildingcompound, environ, generator, pergola]
   },
   {
     title: "Living Room",
-    images: [
-      livingroom,
-      sofa,
-      sofa1,
-      sofa2,
-      tv,
-      dining
-    ]
+    images: [livingroom, dining]
   },
   {
     title: "Bedroom",
-    images: [
-      bedroom,
-      bedroom1,
-      bedroom2,
-      bedroom3,
-      bedside,
-      bedside2
-    ]
+    images: [bedroom, bedroom1, bedroom2]
   },
   {
     title: "Kitchen",
-    images: [
-      kitchen,
-      kitchencabinet,
-      kitchentap,
-      kettle,
-      microwave,
-      refrigerator,
-      stove,
-      stove2,
-      washingmachine,
-      washingmachine1,
-      washingmachine2,
-      washingmachine3,
-      washingmachine4,
-      kitchencabinet2,
-      kitchen3
-    ]
+    images: [kitchen, microwave, washingmachine4]
   },
   {
     title: "Bathroom",
-    images: [
-      bathroom,
-      bathroomshower,
-      washroom,
-      washroom3,
-      tap,
-      tap2,
-      tab3
-    ]
+    images: [bathroom]
   }
 ]
 

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Play, ShieldCheck, Star, Sun, Wind } from "lucide-react"
+import livingroom from "@/assets/Anns-luxury/livingroom.jpg"
 
 const HeroSection = () => {
   const scrollToDetails = () => {
@@ -61,8 +62,7 @@ const HeroSection = () => {
            {/* Main Image Container */}
            <div className="relative w-full sm:w-[80%] lg:w-[85%] xl:w-[75%] h-[90%] lg:h-[80%] bg-black/50 border border-white/10 overflow-visible flex justify-center items-center rounded-sm z-10 mx-auto lg:mr-16">
                
-               <span className="text-white/30 tracking-widest uppercase font-black text-xl">Image Here</span>
-               {/* Note: User will place their image inside this container replacing the text above */}
+               <img src={livingroom} alt="Living Room" className="absolute inset-0 w-full h-full object-cover rounded-sm" />
 
                {/* 1. Stat Outline Box - Top Left */}
                <div className="absolute -left-4 sm:-left-16 lg:-left-24 top-8 border border-white/40 p-4 sm:p-6 backdrop-blur-md hidden sm:block z-20">
