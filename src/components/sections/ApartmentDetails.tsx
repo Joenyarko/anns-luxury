@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Star, Wifi, Car, Utensils, Dumbbell, Play, Pause, Volume2, VolumeX, CalendarClock, ShieldCheck, X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react"
 import { cn } from "@/lib/utils"
-import annsVideo from "@/assets/Anns-luxury/annsvideo.MP4";
+import annsVideo from "@/assets/Anns-luxury/annsvideo.mp4";
 import buildingcompound from "@/assets/Anns-luxury/buildingcompound.jpg";
 import environ from "@/assets/Anns-luxury/environ.jpg";
 import generator from "@/assets/Anns-luxury/generator.jpg";
