@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import bedroom from "@/assets/Anns-luxury/bedroom.jpg"
+import airbnbbed2 from "@/assets/Anns-luxury/airbnbbed2.jpg"
 
 const stats = [
   { value: "500+", label: "Happy guests in total" },
@@ -58,7 +58,7 @@ const StatsSection = () => {
 
       {/* Right Side Image mapping to arcenergy layout */}
       <div className="w-full lg:w-1/2 min-h-[400px] lg:min-h-[500px] relative bg-gray-900 border-t border-l-0 lg:border-t-0 lg:border-l border-white/5 overflow-hidden flex items-center justify-center">
-        <img src={bedroom} alt="Bedroom" className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-1000 hover:scale-105" />
+        <img src={airbnbbed2} alt="Bedroom" className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-1000 hover:scale-105" />
       </div>
     </section>
   )
