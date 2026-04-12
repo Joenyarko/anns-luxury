@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import { CheckCircle2 } from "lucide-react"
 import buildingcompound from "@/assets/Anns-luxury/buildingcompound.jpg"
+import environImage from "@/assets/Anns-luxury/environ.jpg"
 
 const About = () => {
   const values = [
@@ -19,7 +20,7 @@ const About = () => {
         <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=900&fit=crop" 
+              src={environImage} 
               alt="Luxury Living" 
               className="w-full h-full object-cover"
             />
