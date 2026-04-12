@@ -74,7 +74,7 @@ const Header = () => {
         className={cn(
           "w-full transition-all duration-300",
           isScrolled || isMenuOpen 
-            ? "bg-[#1A1A1A] backdrop-blur-md border-b border-white/5 shadow-lg py-2" 
+            ? "bg-primary backdrop-blur-md border-b border-white/5 shadow-lg py-2" 
             : "bg-transparent border-transparent py-4"
         )}
       >
