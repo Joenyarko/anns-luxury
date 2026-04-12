@@ -269,7 +269,6 @@ const ApartmentDetails = () => {
                 {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
               </button>
             </div>
-            </div>
           </div>
           
           <div className="flex justify-center mt-12 animate-fade-in">
