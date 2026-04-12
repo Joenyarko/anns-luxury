@@ -366,76 +366,7 @@ const ApartmentDetails = () => {
           </div>
         </div>
 
-        {/* Amenities section */}
-        <div className="mb-16">
-          <h3 className="font-display text-3xl font-semibold mb-8 text-center">Premium Amenities</h3>
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-            {amenities.map((amenity) => {
-              const Icon = amenityIcons[amenity as keyof typeof amenityIcons]
-              return (
-                <div key={amenity} className="flex items-center space-x-3 bg-background rounded-full px-6 py-3 shadow-sm hover:shadow-md transition-shadow">
-                  <Icon className="h-5 w-5 text-primary" />
-                  <span className="font-medium">{amenity}</span>
-                </div>
-              )
-            })}
-          </div>
-        </div>
 
-        {/* Pricing Flexboxes */}
-        <div className="mb-20 px-2 lg:px-0">
-          <h3 className="font-display text-3xl md:text-4xl font-bold mb-12 text-center">Flexible <span className="text-primary">Stays</span></h3>
-          <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 md:gap-8 max-w-6xl mx-auto">
-            {pricingOptions.map((option, idx) => (
-              <Card key={idx} className={cn(
-                "flex-1 flex flex-col p-8 rounded-[2rem] transition-luxury duration-500 hover:-translate-y-2",
-                idx === 1
-                  ? "border-primary/50 border-2 bg-black text-white shadow-luxury scale-105 z-10"
-                  : "bg-white border-white/10 shadow-elegant"
-              )}>
-                <CardHeader className="p-0 mb-6">
-                  <div className={cn(
-                    "inline-block px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-4",
-                    idx === 1 ? "bg-primary text-black" : "bg-primary/10 text-primary"
-                  )}>
-                    {option.term}
-                  </div>
-                  <CardTitle className={cn(
-                    "text-5xl font-black font-display flex items-baseline gap-2",
-                    idx === 1 ? "text-white" : "text-black"
-                  )}>
-                    {option.price}
-                    <span className={cn(
-                      "text-sm font-normal uppercase tracking-widest",
-                      idx === 1 ? "text-white/40" : "text-black/40"
-                    )}>
-                      / {option.term.toLowerCase().replace('ly', '')}
-                    </span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-0 flex flex-col flex-1">
-                  <p className={cn(
-                    "text-base leading-relaxed mb-8 italic",
-                    idx === 1 ? "text-white/60" : "text-gray-500"
-                  )}>
-                    "{option.description}"
-                  </p>
-                  <div className="mt-auto pt-6 border-t border-white/10">
-                    <Button
-                      variant={idx === 1 ? "luxury" : "default"}
-                      className={cn(
-                        "w-full h-12 rounded-full font-bold uppercase tracking-widest text-xs",
-                        idx === 1 ? "" : "bg-black text-white hover:bg-black/90"
-                      )}
-                    >
-                      Select {option.term}
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
 
         {/* Call to Action */}
         <div className="text-center mt-12 mb-8 p-10 bg-primary/5 rounded-3xl border border-primary/10 max-w-3xl mx-auto">

@@ -5,6 +5,7 @@ import StatsSection from "@/components/sections/StatsSection"
 import ApartmentDetails from "@/components/sections/ApartmentDetails"
 import WhyChooseUs from "@/components/sections/WhyChooseUs"
 import ReviewsSection from "@/components/sections/ReviewsSection"
+import WelcomeBanner from "@/components/sections/WelcomeBanner"
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <WhyChooseUs />
         <ApartmentDetails />
         <ReviewsSection />
+        <WelcomeBanner />
       </main>
       <Footer />
     </div>
