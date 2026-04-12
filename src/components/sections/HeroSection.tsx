@@ -62,7 +62,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-10 w-full px-4 lg:px-8 xl:px-16 pt-[20vh] xl:pt-0">
+      <div className="relative z-10 w-full px-4 lg:px-8 xl:px-16 pt-[12vh] xl:pt-0">
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 items-center justify-items-center xl:min-h-[60vh]">
           
           {/* Column 1: Floating Left Image Placeholder */}
@@ -76,7 +76,7 @@ const HeroSection = () => {
           </div>
 
           {/* Column 2: Main Central Content */}
-          <div className="text-center w-full max-w-2xl animate-fade-in order-first xl:order-none mb-16 xl:mb-0 flex flex-col items-center justify-center">
+          <div className="text-center w-full max-w-2xl animate-fade-in order-first xl:order-none mb-16 xl:mb-0 flex flex-col items-center justify-center xl:-mt-24">
             
             <h1 className="font-display font-black leading-[1.1] mb-6">
               <span className="text-3xl sm:text-4xl md:text-5xl text-white block mb-2">Welcome to</span>
