@@ -3,7 +3,7 @@ import bedroom from "@/assets/Anns-luxury/bedroom.jpg"
 
 const stats = [
   { value: "500+", label: "Happy guests in total" },
-  { value: "4.9", label: "Average rating annually" },
+  { value: "98%", label: "Average rating annually" },
   { value: "24/7", label: "Top concierge service awards" },
 ]
 
