@@ -15,12 +15,16 @@ import dining from "@/assets/Anns-luxury/dining.jpg";
 import bedroom from "@/assets/Anns-luxury/bedroom.jpg";
 import bedroom1 from "@/assets/Anns-luxury/bedroom1.jpg";
 import bedroom2 from "@/assets/Anns-luxury/bedroom2.jpg";
+import airbnbbed2 from "@/assets/Anns-luxury/airbnbbed2.jpg";
+import airbnbbedroom from "@/assets/Anns-luxury/airbnbbedroom.jpg";
 
 import kitchen from "@/assets/Anns-luxury/kitchen.jpg";
 import microwave from "@/assets/Anns-luxury/microwave.jpg";
 import washingmachine4 from "@/assets/Anns-luxury/washingmachine4.jpg";
+import airbnbkitchen from "@/assets/Anns-luxury/airbnbkitchen.jpg";
 
 import bathroom from "@/assets/Anns-luxury/bathroom.jpg";
+import airbnbbathroom from "@/assets/Anns-luxury/airbnbbathroom.jpg";
 
 const categories = [
   {
@@ -33,15 +37,15 @@ const categories = [
   },
   {
     title: "Bedroom",
-    images: [bedroom, bedroom1, bedroom2]
+    images: [airbnbbedroom, airbnbbed2, bedroom, bedroom1, bedroom2]
   },
   {
     title: "Kitchen",
-    images: [kitchen, microwave, washingmachine4]
+    images: [airbnbkitchen, kitchen, microwave, washingmachine4]
   },
   {
     title: "Bathroom",
-    images: [bathroom]
+    images: [airbnbbathroom, bathroom]
   }
 ]
 
