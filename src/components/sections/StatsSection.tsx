@@ -32,7 +32,7 @@ const StatsSection = () => {
             </div>
             
             <div className="text-white text-sm md:text-base font-bold leading-tight">
-              Contact<br/>our experts
+              Happy<br/>Customers
             </div>
           </div>
 
