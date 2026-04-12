@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Play, ShieldCheck, Star, Sun, Wind } from "lucide-react"
+import { Play, ShieldCheck, Star, Sun, Wind, Users, Bed, Zap } from "lucide-react"
 import livingroom from "@/assets/Anns-luxury/livingroom.jpg"
 
 const HeroSection = () => {
@@ -69,8 +69,8 @@ const HeroSection = () => {
                
                <img src={livingroom} alt="Living Room" className="absolute inset-0 w-full h-full object-cover rounded-sm" />
 
-               {/* 1. Stat Outline Box - Top Left */}
-               <div className="absolute -left-4 sm:-left-16 lg:-left-24 top-8 border border-white/40 p-4 sm:p-6 backdrop-blur-md hidden sm:block z-20">
+               {/* 1. Stat Box - Top Left */}
+               <div className="absolute -left-4 sm:-left-16 lg:-left-24 top-8 border border-white/40 p-4 sm:p-6 backdrop-blur-md hidden sm:block z-20 hover:scale-105 transition-transform duration-300">
                   <div className="text-3xl sm:text-5xl font-display text-white mb-2 flex items-baseline gap-1 font-semibold">
                     100<span className="text-xl sm:text-2xl">%</span>
                   </div>
@@ -79,25 +79,32 @@ const HeroSection = () => {
                   </div>
                </div>
 
-               {/* 2. Pill Badge - Overlapping Left */}
-               <div className="absolute -left-6 sm:-left-12 lg:-left-20 top-[40%] bg-[#E2FF4A] text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full flex items-center gap-2 shadow-[0_10px_30px_rgba(226,255,74,0.3)] z-20 transition-transform hover:scale-105">
-                  <Wind size={18} className="shrink-0" />
-                  <span className="text-[10px] sm:text-xs font-black uppercase tracking-wider">Uninterrupted AC</span>
+               {/* 2. Pill Badge - Mid Left */}
+               <div className="absolute -left-6 sm:-left-12 lg:-left-20 top-[40%] bg-[#E2FF4A] text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full flex items-center gap-2 shadow-[0_10px_30px_rgba(226,255,74,0.3)] z-20 transition-transform hover:scale-105 duration-300">
+                  <Wind className="shrink-0 w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="text-[9px] sm:text-xs font-black uppercase tracking-wider">Relax in AC Sitting Room</span>
                </div>
 
                {/* 3. White Square Box - Bottom Left */}
-               <div className="absolute -left-2 sm:-left-16 lg:-left-24 bottom-4 sm:bottom-12 bg-white p-5 sm:p-8 w-48 sm:w-64 shadow-2xl z-20">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary flex items-center justify-center mb-4 sm:mb-6 shadow-inner">
-                     <Star className="text-[#E2FF4A] w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" />
+               <div className="absolute -left-2 sm:-left-16 lg:-left-24 bottom-4 sm:bottom-12 bg-white p-4 sm:p-6 w-40 sm:w-56 shadow-2xl z-20 hidden sm:block hover:-translate-y-2 transition-transform duration-300">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary flex items-center justify-center mb-3 sm:mb-4 shadow-inner">
+                     <Users className="text-[#E2FF4A] w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" />
                   </div>
-                  <h4 className="text-black font-black text-base sm:text-xl leading-snug">
-                     Your comfort with proven excellence
+                  <h4 className="text-black font-black text-sm sm:text-base leading-snug">
+                     Perfect space for Family & Friends
                   </h4>
                </div>
 
-               {/* 4. White Circle Icon - Right Edge */}
-               <div className="absolute -right-6 sm:-right-8 top-[60%] sm:top-[65%] w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white flex items-center justify-center shadow-xl z-20">
-                  <Sun className="text-black w-5 h-5 sm:w-7 sm:h-7" />
+               {/* 4. Pill Badge - Top Right */}
+               <div className="absolute -right-4 sm:-right-12 lg:-right-16 top-16 bg-white text-black px-4 sm:px-5 py-2 sm:py-2.5 rounded-full flex items-center gap-2 shadow-2xl z-20 transition-transform hover:scale-105 duration-300 hidden sm:flex">
+                  <Bed className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                  <span className="text-[9px] sm:text-xs font-bold uppercase tracking-wide">Sleep in Comfort</span>
+               </div>
+
+               {/* 5. Pill Badge - Bottom Right */}
+               <div className="absolute -right-6 sm:-right-10 lg:-right-12 bottom-[20%] sm:bottom-[25%] bg-[#011422] border border-white/20 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full flex items-center gap-2 shadow-xl z-20 transition-transform hover:scale-105 duration-300">
+                  <Zap className="shrink-0 w-4 h-4 sm:w-5 sm:h-5 text-[#E2FF4A] fill-[#E2FF4A]" />
+                  <span className="text-[9px] sm:text-xs font-bold tracking-wide">24 Hour Electricity</span>
                </div>
            </div>
         </div>
