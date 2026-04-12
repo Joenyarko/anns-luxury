@@ -60,7 +60,7 @@ const VideoSection = () => {
           <video
             ref={videoRef}
             src={videoSrc}
-            className="w-full h-full object-cover aspect-video"
+            className="w-full h-full object-contain bg-black aspect-video"
             playsInline
             muted={isMuted}
             loop
