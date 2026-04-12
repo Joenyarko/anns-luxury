@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="mb-8">
-              <img src={annLogo} alt="Anns Luxurious Apartments" className="h-24 w-auto mb-0 drop-shadow-lg brightness-0 invert" />
+              <img src={annLogo} alt="Anns Luxurious Apartments" className="h-24 w-auto mb-0 drop-shadow-lg" />
             </div>
             <p className="text-white/80 mb-6 max-w-md">
               Experience luxury living redefined. Our premium serviced apartments offer unparalleled comfort, 
