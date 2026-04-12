@@ -231,7 +231,7 @@ const ApartmentDetails = () => {
 
           {/* Virtual Tour Video */}
           <div
-            className="relative rounded-2xl md:rounded-[2rem] overflow-hidden shadow-luxury group h-[450px] md:h-[650px] bg-gray-900 cursor-pointer"
+            className="relative mx-auto rounded-2xl md:rounded-[2rem] overflow-hidden shadow-luxury group w-full max-w-[340px] md:max-w-[420px] h-[550px] md:h-[750px] bg-gray-900 cursor-pointer"
             onClick={togglePlay}
             onKeyDown={handleKeyDown}
             tabIndex={0}

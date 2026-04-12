@@ -49,7 +49,7 @@ const VideoSection = () => {
         </div>
 
         <div 
-          className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-luxury group cursor-pointer"
+          className="relative mx-auto w-full max-w-[340px] md:max-w-[420px] rounded-2xl md:rounded-[3rem] overflow-hidden shadow-luxury group h-[550px] md:h-[750px] bg-black cursor-pointer"
           onClick={togglePlay}
           onKeyDown={handleKeyDown}
           tabIndex={0}
