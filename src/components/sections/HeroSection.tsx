@@ -79,8 +79,8 @@ const HeroSection = () => {
           <div className="text-center w-full max-w-2xl animate-fade-in order-first xl:order-none mb-16 xl:mb-0 flex flex-col items-center justify-center">
             
             <h1 className="font-display font-black leading-[1.1] mb-6">
-              <span className="text-4xl sm:text-5xl md:text-6xl text-white block mb-2">Welcome to</span>
-              <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight text-white block leading-[1]">Ann's Luxury Apartment</span>
+              <span className="text-3xl sm:text-4xl md:text-5xl text-white block mb-2">Welcome to</span>
+              <span className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[3.5rem] tracking-tight text-white block leading-[1] whitespace-nowrap">Ann's Luxury Apartment</span>
             </h1>
             
             <p className="italic font-light text-white/90 text-2xl sm:text-3xl md:text-4xl mb-8">
