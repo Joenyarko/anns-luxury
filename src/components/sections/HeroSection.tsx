@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 lg:px-8 xl:px-16 relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center mt-8">
         
         {/* LEFT COLUMN - TEXT CONTENT */}
-        <div className="max-w-xl animate-fade-in order-2 lg:order-1 flex flex-col items-start text-left">
+        <div className="max-w-xl animate-fade-in flex flex-col items-start text-left">
           
           <h1 className="font-display font-medium text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[5.5rem] leading-[1.05] tracking-tight text-white mb-6">
             Welcome to <br />
@@ -52,7 +52,7 @@ const HeroSection = () => {
         </div>
 
         {/* RIGHT COLUMN - IMAGE PLACEHOLDER AND BADGES */}
-        <div className="relative w-full h-[500px] lg:h-[700px] flex items-center justify-center lg:justify-end animate-fade-in order-1 lg:order-2">
+        <div className="relative w-full h-[500px] lg:h-[700px] flex items-center justify-center lg:justify-end animate-fade-in mt-16 lg:mt-0">
            
            {/* Rotated Right Edge Text */}
            <div className="absolute -right-8 top-1/2 -translate-y-1/2 rotate-90 origin-center hidden xl:block z-0">

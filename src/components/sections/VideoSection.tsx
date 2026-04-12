@@ -95,6 +95,17 @@ const VideoSection = () => {
             />
           </div>
         </div>
+
+        <div className="flex justify-center mt-12 animate-fade-in">
+          <a
+            href="https://www.tiktok.com/@annsluxapartments?_r=1&_t=ZS-94ug9NGf2rV"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-white hover:opacity-90 transition-opacity font-bold shadow-luxury"
+          >
+            Watch More Videos <ExternalLink size={16} />
+          </a>
+        </div>
       </div>
     </section>
   )

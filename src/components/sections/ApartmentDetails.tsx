@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Star, Wifi, Car, Utensils, Dumbbell, Play, Pause, Volume2, VolumeX, CalendarClock, ShieldCheck, X, ChevronLeft, ChevronRight } from "lucide-react"
+import { Star, Wifi, Car, Utensils, Dumbbell, Play, Pause, Volume2, VolumeX, CalendarClock, ShieldCheck, X, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react"
 import { cn } from "@/lib/utils"
-import annsVideo from "@/assets/Anns-luxury/video.MOV";
+import annsVideo from "@/assets/Anns-luxury/annsvideo.MP4";
 import buildingcompound from "@/assets/Anns-luxury/buildingcompound.jpg";
 import environ from "@/assets/Anns-luxury/environ.jpg";
 import generator from "@/assets/Anns-luxury/generator.jpg";
@@ -269,7 +269,20 @@ const ApartmentDetails = () => {
                 {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
               </button>
             </div>
+            </div>
           </div>
+          
+          <div className="flex justify-center mt-12 animate-fade-in">
+            <a
+              href="https://www.tiktok.com/@annsluxapartments?_r=1&_t=ZS-94ug9NGf2rV"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-white hover:opacity-90 transition-opacity font-bold shadow-luxury"
+            >
+              Watch More Videos <ExternalLink size={16} />
+            </a>
+          </div>
+
         </div>
 
 

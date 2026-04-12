@@ -4,22 +4,22 @@ const features = [
   {
     icon: Shield,
     title: "Premium Security",
-    description: "24/7 security with state-of-the-art surveillance and secure access systems for your peace of mind."
+    description: "24/7 security, fully manned with surveillance."
   },
   {
     icon: MapPin,
-    title: "Prime Locations",
-    description: "Strategically located in the heart of the city with easy access to business districts and attractions."
-  },
-  {
-    icon: Clock,
-    title: "Exceptional Service",
-    description: "Round-the-clock concierge service and dedicated staff to cater to your every need."
+    title: "Location",
+    description: "Located in Accra, close to Achimota and good access to major roads."
   },
   {
     icon: Award,
     title: "Luxury Amenities",
-    description: "World-class amenities including fitness centers, rooftop lounges, and premium business facilities."
+    description: "Ensuite rooms, AC, WiFi, smart TV, comfortable sitting room, fully equipped kitchen with fridge, washing machine, etc."
+  },
+  {
+    icon: Clock,
+    title: "About Your Stay",
+    description: "Anns Luxurious Apartment provides 2 comfortable bedrooms to suit a family. The serene environment enables you to enjoy a quiet stay with a large living room and kitchen."
   }
 ]
 
