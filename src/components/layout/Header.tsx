@@ -42,7 +42,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 w-full z-50">
       {/* Row 1: Top Bar (Gold) */}
       <div className="bg-primary py-2 px-4 shadow-sm">
-        <div className="container mx-auto flex justify-between items-center text-[10px] md:text-xs font-bold text-black uppercase tracking-wider">
+        <div className="container mx-auto flex justify-between items-center text-[10px] md:text-xs font-bold text-white uppercase tracking-wider">
           <div className="flex items-center space-x-4 md:space-x-6">
             <a href="tel:+233547944813" className="flex items-center hover:opacity-70 transition-opacity">
               <Phone size={14} className="mr-1.5" />
@@ -111,7 +111,7 @@ const Header = () => {
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center space-x-4">
-              <Button variant={isScrolled ? "luxury" : "default"} className={cn("rounded-full font-bold uppercase tracking-wider text-black", (isScrolled || isDarkPage) ? "bg-primary hover:bg-primary/90" : "bg-white")} asChild>
+              <Button variant={isScrolled ? "luxury" : "default"} className={cn("rounded-full font-bold uppercase tracking-wider", (isScrolled || isDarkPage) ? "bg-primary text-white hover:bg-primary/90" : "bg-white text-black")} asChild>
                 <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer">Book Now</a>
               </Button>
             </div>
