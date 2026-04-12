@@ -11,7 +11,7 @@ const StatsSection = () => {
   return (
     <section className="relative z-40 -mt-16 sm:-mt-24 md:-mt-32 pb-16 lg:pb-24 px-4 overflow-visible">
       <div className="container mx-auto">
-        <div className="max-w-6xl mx-auto bg-black/95 backdrop-blur-3xl border border-white/10 rounded-2xl sm:rounded-3xl md:rounded-[3.5rem] p-6 sm:p-8 md:p-14 shadow-[0_30px_70px_rgba(0,0,0,0.8)] group hover:border-primary/20 transition-all duration-700">
+        <div className="max-w-6xl mx-auto bg-primary backdrop-blur-3xl border border-white/10 rounded-2xl sm:rounded-3xl md:rounded-[3.5rem] p-6 sm:p-8 md:p-14 shadow-[0_30px_70px_rgba(0,0,0,0.8)] group hover:border-primary/20 transition-all duration-700">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-0">
             {stats.map((stat, index) => (
               <div 
