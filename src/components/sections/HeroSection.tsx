@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Play, ShieldCheck, Star, Sun, Wind, Users, Bed, Zap } from "lucide-react"
-import livingroom from "@/assets/Anns-luxury/livingroom.jpg"
+import airbnbbed2 from "@/assets/Anns-luxury/airbnbbed2.jpg"
 
 const HeroSection = () => {
   const scrollToDetails = () => {
@@ -67,7 +67,7 @@ const HeroSection = () => {
            {/* Main Image Container */}
            <div className="relative w-full sm:w-[80%] lg:w-[85%] xl:w-[75%] h-[90%] lg:h-[80%] bg-black/50 border border-white/10 overflow-visible flex justify-center items-center rounded-sm z-10 mx-auto lg:mr-16">
                
-               <img src={livingroom} alt="Living Room" className="absolute inset-0 w-full h-full object-cover rounded-sm" />
+               <img src={airbnbbed2} alt="Luxury Bedroom" className="absolute inset-0 w-full h-full object-cover rounded-sm" />
 
                {/* 1. Stat Box - Top Left */}
                <div className="absolute -left-2 sm:-left-16 lg:-left-24 top-4 sm:top-8 border border-white/40 p-2 sm:p-6 backdrop-blur-md z-20 hover:scale-105 transition-transform duration-300">
