@@ -21,7 +21,7 @@ const StatsSection = () => {
                   index !== stats.length - 1 && "lg:border-r border-white/10"
                 )}
               >
-                <div className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-primary mb-1 md:mb-2 drop-shadow-[0_0_15px_rgba(234,179,8,0.3)] group-hover:scale-110 transition-transform duration-500">
+                <div className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white mb-1 md:mb-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] group-hover:scale-110 transition-transform duration-500">
                   {stat.value}
                 </div>
                 <div className="text-white/60 text-[8px] sm:text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] font-black">

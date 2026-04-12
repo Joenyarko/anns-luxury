@@ -80,10 +80,10 @@ const HeroSection = () => {
             
             <h1 className="font-display font-black leading-[1.1] mb-6">
               <span className="text-4xl sm:text-5xl md:text-6xl text-white block mb-2">Welcome to</span>
-              <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight text-primary block leading-[1]">Ann's Luxury Apartment</span>
+              <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight text-white block leading-[1]">Ann's Luxury Apartment</span>
             </h1>
             
-            <p className="italic font-light text-primary/90 text-2xl sm:text-3xl md:text-4xl mb-8">
+            <p className="italic font-light text-white/90 text-2xl sm:text-3xl md:text-4xl mb-8">
               Your luxury short stay in Accra
             </p>
             

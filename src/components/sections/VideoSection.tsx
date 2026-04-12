@@ -41,7 +41,7 @@ const VideoSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
-            Experience <span className="text-primary">Golden Stays</span>
+            Experience <span className="text-white">Golden Stays</span>
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
             Take a virtual tour of our premium executive suites and see luxury redefined.
@@ -71,7 +71,7 @@ const VideoSection = () => {
             "absolute inset-0 bg-black/40 transition-opacity duration-500 flex items-center justify-center",
             isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"
           )}>
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 flex items-center justify-center text-primary transition-transform duration-300 group-hover:scale-110">
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110">
               {isPlaying ? <Pause size={40} fill="currentColor" /> : <Play size={40} className="ml-1" fill="currentColor" />}
             </div>
           </div>
@@ -88,9 +88,9 @@ const VideoSection = () => {
           </div>
 
           {/* Progress bar (aesthetic) */}
-          <div className="absolute bottom-0 left-0 h-1 bg-primary/30 w-full">
+          <div className="absolute bottom-0 left-0 h-1 bg-white/30 w-full">
             <div 
-              className="h-full bg-primary transition-all duration-300" 
+              className="h-full bg-white transition-all duration-300" 
               style={{ width: isPlaying ? '100%' : '0%', transitionDuration: '20000ms' }}
             />
           </div>

@@ -347,7 +347,7 @@ const ApartmentDetails = () => {
               isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"
             )}>
               <div className="flex flex-col items-center gap-3">
-                <div className="w-24 h-24 rounded-full bg-primary/20 backdrop-blur-md border border-primary/30 flex items-center justify-center text-primary transition-transform duration-300 group-hover:scale-110">
+                <div className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110">
                   {isPlaying ? <Pause size={40} fill="currentColor" /> : <Play size={40} className="ml-1" fill="currentColor" />}
                 </div>
                 {!isPlaying && <span className="text-white font-black tracking-[0.2em] uppercase text-sm md:text-base">Experience Virtual Tour</span>}
