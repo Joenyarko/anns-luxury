@@ -18,11 +18,11 @@ All colors MUST be HSL. Gold and white luxury theme.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    /* Primary gold colors */
-    --primary: 45 100% 51%;
+    /* Primary brand colors (#242F40) */
+    --primary: 216.6 28.1% 19.6%;
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 45 100% 45%;
-    --primary-light: 45 100% 65%;
+    --primary-dark: 216.6 28.1% 15%;
+    --primary-light: 216.6 28.1% 30%;
 
     /* Secondary neutral colors */
     --secondary: 0 0% 96%;
@@ -31,7 +31,7 @@ All colors MUST be HSL. Gold and white luxury theme.
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 45 100% 51%;
+    --accent: 216.6 28.1% 19.6%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -39,19 +39,19 @@ All colors MUST be HSL. Gold and white luxury theme.
 
     --border: 0 0% 90%;
     --input: 0 0% 100%;
-    --ring: 45 100% 51%;
+    --ring: 216.6 28.1% 19.6%;
 
     --radius: 0.75rem;
 
     /* Luxury gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(45 100% 51%) 0%, hsl(45 100% 65%) 50%, hsl(45 100% 45%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(45 100% 51% / 0.9) 0%, hsl(45 100% 45% / 0.8) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(216.6 28.1% 25%) 0%, hsl(216.6 28.1% 30%) 50%, hsl(216.6 28.1% 15%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(216.6 28.1% 19.6% / 0.9) 0%, hsl(216.6 28.1% 15% / 0.8) 100%);
     --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
 
     /* Luxury shadows */
-    --shadow-luxury: 0 25px 50px -12px hsl(45 100% 51% / 0.25);
+    --shadow-luxury: 0 25px 50px -12px hsl(216.6 28.1% 19.6% / 0.25);
     --shadow-elegant: 0 10px 25px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
-    --shadow-gold: 0 0 30px hsl(45 100% 51% / 0.3);
+    --shadow-gold: 0 0 30px hsl(216.6 28.1% 19.6% / 0.3);
 
     /* Typography */
     --font-display: 'Playfair Display', serif;
