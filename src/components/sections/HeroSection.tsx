@@ -19,7 +19,9 @@ const HeroSection = () => {
           
           <h1 className="font-display font-medium text-5xl sm:text-6xl md:text-7xl lg:text-[4.5rem] xl:text-[5rem] leading-[1.1] tracking-tight text-white mb-4">
             <span className="block mb-2 text-4xl sm:text-5xl md:text-6xl">Welcome to</span>
-            <span className="font-bold text-[#E2FF4A] block xl:whitespace-nowrap">Ann's Luxury Apartment</span>
+            <span className="font-bold text-[#E2FF4A] block">
+              Ann's Luxury <br className="hidden lg:block" /> Apartment
+            </span>
           </h1>
           
           <p className="font-display italic text-white/90 text-2xl md:text-3xl lg:text-4xl mb-6">
