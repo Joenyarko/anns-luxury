@@ -17,14 +17,17 @@ const HeroSection = () => {
         {/* LEFT COLUMN - TEXT CONTENT */}
         <div className="max-w-xl animate-fade-in flex flex-col items-start text-left">
           
-          <h1 className="font-display font-medium text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[5.5rem] leading-[1.05] tracking-tight text-white mb-6">
-            Welcome to <br />
-            <span className="font-bold text-[#E2FF4A]">Ann's Luxury</span> <br />
-            Apartment
+          <h1 className="font-display font-medium text-5xl sm:text-6xl md:text-7xl lg:text-[4.5rem] xl:text-[5rem] leading-[1.1] tracking-tight text-white mb-4">
+            <span className="block mb-2 text-4xl sm:text-5xl md:text-6xl">Welcome to</span>
+            <span className="font-bold text-[#E2FF4A] block xl:whitespace-nowrap">Ann's Luxury Apartment</span>
           </h1>
           
-          <p className="text-white/80 text-lg md:text-xl font-light mb-10 max-w-md leading-relaxed">
-            Your luxury short stay in Accra. Experience the pinnacle of comfort in our premium serviced apartment. Professional, safe, and tailored to your specific needs.
+          <p className="font-display italic text-white/90 text-2xl md:text-3xl lg:text-4xl mb-6">
+            Your luxury short stay in Accra
+          </p>
+
+          <p className="text-white/80 text-base md:text-lg font-light mb-10 max-w-md leading-relaxed">
+            Experience the pinnacle of comfort in our premium serviced apartment. Professional, safe, and tailored to your specific needs.
           </p>
           
           {/* CTA Buttons */}
