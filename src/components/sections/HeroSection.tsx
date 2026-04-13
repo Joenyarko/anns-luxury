@@ -60,7 +60,7 @@ const HeroSection = () => {
         <div className="relative w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between animate-fade-in mt-16 lg:mt-0 gap-8">
            
            {/* Image Container */}
-           <div className="relative w-full lg:w-[60%] xl:w-[55%] h-[350px] sm:h-[450px] lg:h-[550px] bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10 shrink-0">
+           <div className="relative w-full lg:w-[75%] xl:w-[70%] h-[350px] sm:h-[450px] lg:h-[550px] bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10 shrink-0">
                <img src={livingroom} alt="Living Room" className="absolute inset-0 w-full h-full object-cover" />
            </div>
 
