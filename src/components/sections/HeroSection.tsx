@@ -65,7 +65,7 @@ const HeroSection = () => {
            </div>
 
            {/* Features List Arranged on Right Side - No Overlap */}
-           <div className="flex flex-col gap-3 w-full lg:w-auto max-w-xs lg:flex-1">
+           <div className="flex flex-col gap-3 w-full lg:w-auto max-w-sm lg:flex-1">
               {[
                 { icon: ShieldCheck, title: "100% Security", label: "Premium" },
                 { icon: Wind, title: "Relax in AC Sitting Room", label: "Comfort" },
