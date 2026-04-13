@@ -24,7 +24,7 @@ const HeroSection = () => {
             </span>
           </h1>
           
-          <p className="font-display italic text-white/90 text-2xl md:text-3xl lg:text-4xl mb-6">
+          <p className="font-display italic text-white/90 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6">
             Your luxury short stay in Accra
           </p>
 
@@ -60,7 +60,7 @@ const HeroSection = () => {
         <div className="relative w-full flex flex-col lg:flex-row items-center justify-center lg:justify-end animate-fade-in mt-16 lg:mt-0">
            
            {/* Image Container */}
-           <div className="relative w-full lg:w-[85%] xl:w-[80%] h-[400px] sm:h-[500px] lg:h-[600px] bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10">
+           <div className="relative w-full lg:w-[70%] xl:w-[65%] h-[400px] sm:h-[500px] lg:h-[600px] bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10">
                <img src={livingroom} alt="Living Room" className="absolute inset-0 w-full h-full object-cover" />
            </div>
 

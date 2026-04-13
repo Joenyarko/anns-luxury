@@ -48,9 +48,9 @@ const Header = () => {
               <Phone size={14} className="mr-1.5" />
               <span className="hidden sm:inline">054 794 4813</span>
             </a>
-            <a href="mailto:info@annsgoldenstays.com" className="flex items-center hover:opacity-70 transition-opacity">
+            <a href="mailto:annsluxapartments@gmail.com" className="flex items-center hover:opacity-70 transition-opacity">
               <Mail size={14} className="mr-1.5" />
-              <span className="hidden sm:inline">info@annsgoldenstays.com</span>
+              <span className="hidden sm:inline">annsluxapartments@gmail.com</span>
             </a>
           </div>
           <div className="flex items-center space-x-3 md:space-x-4">

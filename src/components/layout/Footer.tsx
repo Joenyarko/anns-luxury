@@ -52,7 +52,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-white" />
-                <span className="text-white/80">info@annsluxury.com</span>
+                <a href="mailto:annsluxapartments@gmail.com" className="text-white/80 hover:text-white transition-colors">annsluxapartments@gmail.com</a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-white" />
