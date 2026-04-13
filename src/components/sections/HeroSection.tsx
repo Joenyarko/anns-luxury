@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Play, ShieldCheck, Star, Sun, Wind, Users, Bed, Zap } from "lucide-react"
+import { Play, ShieldCheck, Star, Sun, Wind, Users, Bed, Zap, Phone } from "lucide-react"
 import livingroom from "@/assets/Anns-luxury/livingroom.jpg"
 
 const HeroSection = () => {
@@ -29,7 +29,7 @@ const HeroSection = () => {
           </p>
 
           <p className="text-white/80 text-base md:text-lg font-light mb-10 max-w-md leading-relaxed">
-            Experience the pinnacle of comfort in our premium serviced apartment. Professional, safe, and tailored to your specific needs.
+            Experience the pinnacle of comfort in our premium serviced apartment.
           </p>
           
           {/* CTA Buttons */}
@@ -42,9 +42,9 @@ const HeroSection = () => {
               Get Started
             </Button>
             
-            <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 cursor-pointer group w-full sm:w-auto justify-center sm:justify-start">
+            <a href="tel:+233547944813" className="flex items-center gap-4 cursor-pointer group w-full sm:w-auto justify-center sm:justify-start">
                <div className="w-14 h-14 rounded-full bg-black/40 border border-white/20 flex items-center justify-center group-hover:bg-black/60 transition-colors shadow-lg">
-                  <Play className="text-white w-5 h-5 ml-1" fill="currentColor" />
+                  <Phone className="text-[#E2FF4A] w-5 h-5" fill="none" />
                </div>
                <div className="flex flex-col text-left">
                  <span className="text-white/70 text-[10px] uppercase tracking-widest font-bold">Talk to us</span>
@@ -56,58 +56,37 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* RIGHT COLUMN - IMAGE PLACEHOLDER AND BADGES */}
-        <div className="relative w-full h-[500px] lg:h-[700px] flex items-center justify-center lg:justify-end animate-fade-in mt-16 lg:mt-0">
+        {/* RIGHT COLUMN - IMAGE AND FEATURES LIST */}
+        <div className="relative w-full flex flex-col lg:flex-row items-center justify-center lg:justify-end animate-fade-in mt-16 lg:mt-0">
            
-           {/* Rotated Right Edge Text */}
-           <div className="absolute -right-8 top-1/2 -translate-y-1/2 rotate-90 origin-center hidden xl:block z-0">
-              <span className="text-white/30 tracking-[0.4em] text-[10px] uppercase whitespace-nowrap font-bold">Enjoy ultimate comfort</span>
+           {/* Image Container */}
+           <div className="relative w-full lg:w-[85%] xl:w-[80%] h-[400px] sm:h-[500px] lg:h-[600px] bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10">
+               <img src={livingroom} alt="Living Room" className="absolute inset-0 w-full h-full object-cover" />
            </div>
 
-           {/* Main Image Container */}
-           <div className="relative w-full sm:w-[80%] lg:w-[85%] xl:w-[75%] h-[90%] lg:h-[80%] bg-black/50 border border-white/10 overflow-visible flex justify-center items-center rounded-sm z-10 mx-auto lg:mr-16">
-               
-               <img src={livingroom} alt="Living Room" className="absolute inset-0 w-full h-full object-cover rounded-sm" />
-
-               {/* 1. Stat Box - Top Left */}
-               <div className="absolute -left-2 sm:-left-16 lg:-left-24 top-4 sm:top-8 border border-white/40 p-2 sm:p-6 backdrop-blur-md z-20 hover:scale-105 transition-transform duration-300">
-                  <div className="text-xl sm:text-5xl font-display text-white mb-0 sm:mb-2 flex items-baseline gap-1 font-semibold">
-                    100<span className="text-xs sm:text-2xl">%</span>
+           {/* Features List Arranged on Right Side */}
+           <div className="flex flex-col gap-3 mt-8 lg:mt-0 lg:absolute lg:-right-8 xl:-right-16 lg:z-20 w-full lg:w-auto max-w-xs">
+              {[
+                { icon: ShieldCheck, title: "100% Security", label: "Premium" },
+                { icon: Wind, title: "Relax in AC Sitting Room", label: "Comfort" },
+                { icon: Users, title: "Space for Family & Friends", label: "Perfect" },
+                { icon: Bed, title: "Sleep in Comfort", label: "Bed" },
+                { icon: Zap, title: "24 Hour Electricity", label: "Electricity" }
+              ].map((item, idx) => (
+                <div 
+                  key={idx} 
+                  className="bg-[#011422] border border-white/10 p-4 flex items-center gap-4 rounded-xl shadow-2xl transition-all hover:translate-x-[-10px] duration-300"
+                  style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
+                >
+                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                    <item.icon className="text-[#E2FF4A] w-5 h-5" />
                   </div>
-                  <div className="text-[7px] sm:text-[10px] uppercase tracking-widest text-[#E2FF4A] w-16 sm:w-28 font-bold leading-tight">
-                    Premium Security
+                  <div className="flex flex-col">
+                    <span className="text-white font-bold text-sm tracking-wide">{item.title}</span>
+                    <span className="text-white/40 text-[10px] uppercase tracking-widest">{item.label}</span>
                   </div>
-               </div>
-
-               {/* 2. Pill Badge - Mid Left */}
-               <div className="absolute -left-4 sm:-left-12 lg:-left-20 top-[40%] bg-[#E2FF4A] text-black px-3 sm:px-6 py-1.5 sm:py-3 rounded-full flex items-center gap-1.5 sm:gap-2 shadow-[0_10px_30px_rgba(226,255,74,0.3)] z-20 transition-transform hover:scale-105 duration-300">
-                  <Wind className="shrink-0 w-3 h-3 sm:w-5 sm:h-5" />
-                  <span className="text-[7px] sm:text-xs font-black uppercase tracking-wider block sm:hidden">AC Sitting Room</span>
-                  <span className="text-[7px] sm:text-xs font-black uppercase tracking-wider hidden sm:block">Relax in AC Sitting Room</span>
-               </div>
-
-               {/* 3. White Square Box - Bottom Left */}
-               <div className="absolute -left-2 sm:-left-16 lg:-left-24 bottom-4 sm:bottom-12 bg-white p-3 sm:p-6 w-32 sm:w-56 shadow-2xl z-20 hover:-translate-y-2 transition-transform duration-300">
-                  <div className="w-6 h-6 sm:w-10 sm:h-10 rounded-full bg-primary flex items-center justify-center mb-2 sm:mb-4 shadow-inner">
-                     <Users className="text-[#E2FF4A] w-3 h-3 sm:w-5 sm:h-5" fill="currentColor" />
-                  </div>
-                  <h4 className="text-black font-black text-[9px] sm:text-base leading-snug">
-                     Perfect Space for Family & Friends
-                  </h4>
-               </div>
-
-               {/* 4. Pill Badge - Top Right */}
-               <div className="absolute -right-2 sm:-right-12 lg:-right-16 top-16 bg-white text-black px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-full flex items-center gap-1.5 sm:gap-2 shadow-2xl z-20 transition-transform hover:scale-105 duration-300">
-                  <Bed className="shrink-0 w-3 h-3 sm:w-5 sm:h-5 text-primary" />
-                  <span className="text-[7px] sm:text-xs font-bold uppercase tracking-wide">Sleep in Comfort</span>
-               </div>
-
-               {/* 5. Pill Badge - Bottom Right */}
-               <div className="absolute -right-4 sm:-right-10 lg:-right-12 bottom-[20%] sm:bottom-[25%] bg-[#011422] border border-white/20 text-white px-3 sm:px-6 py-1.5 sm:py-3 rounded-full flex items-center gap-1.5 sm:gap-2 shadow-xl z-20 transition-transform hover:scale-105 duration-300">
-                  <Zap className="shrink-0 w-3 h-3 sm:w-5 sm:h-5 text-[#E2FF4A] fill-[#E2FF4A]" />
-                  <span className="text-[7px] sm:text-xs font-bold tracking-wide block sm:hidden">24 hr Light</span>
-                  <span className="text-[7px] sm:text-xs font-bold tracking-wide hidden sm:block">24 Hour Electricity</span>
-               </div>
+                </div>
+              ))}
            </div>
         </div>
       </div>
