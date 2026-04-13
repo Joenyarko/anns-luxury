@@ -57,15 +57,15 @@ const HeroSection = () => {
         </div>
 
         {/* RIGHT COLUMN - IMAGE AND FEATURES LIST */}
-        <div className="relative w-full flex flex-col lg:flex-row items-center justify-center lg:justify-end animate-fade-in mt-16 lg:mt-0">
+        <div className="relative w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between animate-fade-in mt-16 lg:mt-0 gap-8">
            
            {/* Image Container */}
-           <div className="relative w-full lg:w-[70%] xl:w-[65%] h-[400px] sm:h-[500px] lg:h-[600px] bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10">
+           <div className="relative w-full lg:w-[60%] xl:w-[55%] h-[350px] sm:h-[450px] lg:h-[550px] bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10 shrink-0">
                <img src={livingroom} alt="Living Room" className="absolute inset-0 w-full h-full object-cover" />
            </div>
 
-           {/* Features List Arranged on Right Side */}
-           <div className="flex flex-col gap-3 mt-8 lg:mt-0 lg:absolute lg:-right-8 xl:-right-16 lg:z-20 w-full lg:w-auto max-w-xs">
+           {/* Features List Arranged on Right Side - No Overlap */}
+           <div className="flex flex-col gap-3 w-full lg:w-auto max-w-xs lg:flex-1">
               {[
                 { icon: ShieldCheck, title: "100% Security", label: "Premium" },
                 { icon: Wind, title: "Relax in AC Sitting Room", label: "Comfort" },
@@ -75,13 +75,13 @@ const HeroSection = () => {
               ].map((item, idx) => (
                 <div 
                   key={idx} 
-                  className="bg-[#011422] border border-white/10 p-4 flex items-center gap-4 rounded-xl shadow-2xl transition-all hover:translate-x-[-10px] duration-300"
+                  className="bg-[#011422] border border-white/10 p-4 flex items-center gap-4 rounded-xl shadow-2xl transition-all hover:translate-x-[10px] duration-300"
                   style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
                 >
                   <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
                     <item.icon className="text-[#E2FF4A] w-5 h-5" />
                   </div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col text-left">
                     <span className="text-white font-bold text-sm tracking-wide">{item.title}</span>
                     <span className="text-white/40 text-[10px] uppercase tracking-widest">{item.label}</span>
                   </div>
