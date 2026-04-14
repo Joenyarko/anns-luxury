@@ -16,15 +16,15 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 lg:px-8 xl:px-16 relative z-10 w-full grid grid-cols-1 lg:grid-cols-[1fr_1.5fr_1fr] gap-12 lg:gap-8 items-center mt-8">
         
         {/* COLUMN 1 - DUAL OVERLAPPING IMAGES (Left on Desktop, 2nd on Mobile) */}
-        <div className="relative w-full flex items-center justify-center lg:justify-start animate-fade-in order-2 lg:order-1 pt-8 lg:pt-0">
-           <div className="relative w-[280px] sm:w-[350px] lg:w-[400px] h-[380px] sm:h-[450px] lg:h-[550px]">
-               {/* Back Image (Building Compound) */}
-               <div className="absolute top-0 left-0 w-[85%] h-[85%] bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10 shadow-2xl transition-transform hover:scale-105 duration-500">
+        <div className="relative w-full flex items-center justify-center lg:justify-start animate-fade-in order-2 lg:order-1 pt-12 lg:pt-0 pb-12 lg:pb-0">
+           <div className="relative w-[280px] sm:w-[350px] lg:w-[420px] h-[380px] sm:h-[450px] lg:h-[580px]">
+               {/* Back Image (Building Compound) - Positioned Top Right */}
+               <div className="absolute top-0 right-0 w-[80%] h-[80%] bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10 shadow-2xl transition-transform hover:scale-105 duration-500">
                    <img src={buildingcompound} alt="Building Compound" className="w-full h-full object-cover" />
                </div>
 
-               {/* Front Image (Living Room) - Overlapping */}
-               <div className="absolute bottom-0 right-0 w-[85%] h-[85%] bg-black/50 border border-white/20 overflow-hidden rounded-2xl z-20 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform hover:scale-105 duration-500 translate-x-4 translate-y-4 lg:translate-x-8 lg:translate-y-8">
+               {/* Front Image (Living Room) - Positioned Bottom Left & Dragged Down */}
+               <div className="absolute bottom-0 left-0 w-[80%] h-[80%] bg-black/50 border border-white/20 overflow-hidden rounded-2xl z-20 shadow-[0_30px_60px_rgba(0,0,0,0.6)] transition-transform hover:scale-105 duration-500 -translate-x-6 translate-y-10 lg:-translate-x-12 lg:translate-y-16">
                    <img src={livingroom} alt="Living Room" className="w-full h-full object-cover" />
                    {/* Glass Effect Overlay */}
                    <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent pointer-events-none" />
