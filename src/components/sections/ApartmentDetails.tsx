@@ -94,7 +94,7 @@ const CategoryCarousel = ({ category }: { category: { title: string, images: str
               }}
               className={cn(
                 "w-2 h-2 rounded-full transition-all duration-300",
-                idx === currentSlide ? "bg-primary w-6" : "bg-white/60 hover:bg-white"
+                idx === currentSlide ? "bg-lemon w-6" : "bg-white/60 hover:bg-lemon"
               )}
               aria-label={`Go to slide ${idx + 1}`}
             />
@@ -110,7 +110,7 @@ const CategoryCarousel = ({ category }: { category: { title: string, images: str
         >
           {/* Close button */}
           <button 
-            className="absolute top-6 right-6 text-white/70 hover:text-white bg-black/40 hover:bg-white/10 p-2 rounded-full transition-colors z-50"
+            className="absolute top-6 right-6 text-white/70 hover:text-lemon bg-black/40 hover:bg-white/10 p-2 rounded-full transition-colors z-50"
             onClick={(e) => { e.stopPropagation(); setIsLightboxOpen(false); }}
             aria-label="Close Lightbox"
           >
@@ -119,7 +119,7 @@ const CategoryCarousel = ({ category }: { category: { title: string, images: str
           
           {/* Previous button */}
           <button 
-            className="absolute left-2 md:left-8 text-white/50 hover:text-white transition-colors p-2 z-50"
+            className="absolute left-2 md:left-8 text-white/50 hover:text-lemon transition-colors p-2 z-50"
             onClick={(e) => { 
                 e.stopPropagation(); 
                 setCurrentSlide((prev) => (prev - 1 + category.images.length) % category.images.length); 
@@ -148,7 +148,7 @@ const CategoryCarousel = ({ category }: { category: { title: string, images: str
                     }}
                     className={cn(
                       "w-2 h-2 rounded-full transition-all duration-300",
-                      idx === currentSlide ? "bg-primary w-4" : "bg-white/40 hover:bg-white/80"
+                      idx === currentSlide ? "bg-lemon w-4" : "bg-white/40 hover:bg-lemon"
                     )}
                     aria-label={`Go to slide ${idx + 1}`}
                   />
@@ -158,7 +158,7 @@ const CategoryCarousel = ({ category }: { category: { title: string, images: str
 
           {/* Next button */}
           <button 
-            className="absolute right-2 md:right-8 text-white/50 hover:text-white transition-colors p-2 z-50"
+            className="absolute right-2 md:right-8 text-white/50 hover:text-lemon transition-colors p-2 z-50"
             onClick={(e) => { 
                 e.stopPropagation(); 
                 setCurrentSlide((prev) => (prev + 1) % category.images.length); 

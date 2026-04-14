@@ -29,12 +29,12 @@ const Header = () => {
   const isDarkPage = location.pathname === "/" || location.pathname === "/about" || location.pathname === "/contact"
   
   const textColorClass = (isScrolled || isMenuOpen) 
-    ? "text-white hover:text-primary" 
-    : (isDarkPage ? "text-white/90 hover:text-white" : "text-gray-900 hover:text-primary")
+    ? "text-white hover:text-lemon" 
+    : (isDarkPage ? "text-white/90 hover:text-lemon" : "text-gray-900 hover:text-lemon")
     
   const activeTextColorClass = (isScrolled || isMenuOpen)
-    ? "text-primary font-semibold"
-    : (isDarkPage ? "text-white font-semibold" : "text-primary font-semibold")
+    ? "text-lemon font-semibold"
+    : (isDarkPage ? "text-lemon font-semibold" : "text-lemon font-semibold")
 
   const logoClass = "h-14 sm:h-16 md:h-24 lg:h-32 w-auto object-contain transition-all duration-300 drop-shadow-2xl"
 
@@ -44,11 +44,11 @@ const Header = () => {
       <div className="bg-primary py-2 px-4 shadow-sm">
         <div className="container mx-auto flex justify-between items-center text-[10px] md:text-xs font-bold text-white uppercase tracking-wider">
           <div className="flex items-center space-x-4 md:space-x-6">
-            <a href="tel:+233547944813" className="flex items-center hover:opacity-70 transition-opacity">
+            <a href="tel:+233547944813" className="flex items-center hover:text-lemon transition-colors">
               <Phone size={14} className="mr-1.5" />
               <span className="hidden sm:inline">054 794 4813</span>
             </a>
-            <a href="mailto:annsluxapartments@gmail.com" className="flex items-center hover:opacity-70 transition-opacity">
+            <a href="mailto:annsluxapartments@gmail.com" className="flex items-center hover:text-lemon transition-colors">
               <Mail size={14} className="mr-1.5" />
               <span className="hidden sm:inline">annsluxapartments@gmail.com</span>
             </a>
@@ -58,7 +58,7 @@ const Header = () => {
               href="https://www.tiktok.com/@annsluxapartments?_r=1&_t=ZS-94ug9NGf2rV" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hover:opacity-70 transition-opacity"
+              className="hover:text-lemon transition-colors"
               aria-label="TikTok"
             >
               <svg viewBox="0 0 448 512" fill="currentColor" className="w-3.5 h-3.5">

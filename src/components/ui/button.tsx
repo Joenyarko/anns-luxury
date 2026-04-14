@@ -9,18 +9,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary-dark shadow-elegant",
+        default: "bg-primary text-primary-foreground hover:bg-lemon hover:text-primary shadow-elegant active:bg-lemon-hover active:scale-95",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-background hover:bg-lemon hover:text-primary transition-all",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        luxury: "luxury-gradient text-primary-foreground hover:shadow-gold transform hover:scale-105 font-semibold",
-        hero: "bg-primary text-primary-foreground hover:bg-primary-dark shadow-luxury transform hover:scale-105 hover:shadow-gold font-semibold text-lg px-8",
-        elegant: "bg-background text-foreground border-2 border-primary hover:bg-primary hover:text-primary-foreground shadow-elegant"
+          "bg-secondary text-secondary-foreground hover:bg-lemon hover:text-primary",
+        ghost: "hover:bg-lemon hover:text-primary transition-all",
+        link: "text-primary underline-offset-4 hover:text-lemon hover:underline",
+        luxury: "luxury-gradient text-primary-foreground hover:bg-lemon hover:text-primary hover:shadow-gold transform hover:scale-105 font-semibold",
+        hero: "bg-primary text-primary-foreground hover:bg-lemon hover:text-primary shadow-luxury transform hover:scale-105 hover:shadow-gold font-semibold text-lg px-8",
+        elegant: "bg-background text-foreground border-2 border-primary hover:bg-lemon hover:border-lemon hover:text-primary shadow-elegant"
       },
       size: {
         default: "h-10 px-4 py-2",

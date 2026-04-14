@@ -21,7 +21,7 @@ const Footer = () => {
                 href="https://www.tiktok.com/@annsluxapartments?_r=1&_t=ZS-94ug9NGf2rV" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="p-2.5 bg-white/10 rounded-full hover:bg-white/20 transition-smooth group"
+                className="p-2.5 bg-white/10 rounded-full hover:bg-lemon hover:text-primary transition-smooth group"
                 aria-label="TikTok"
               >
                 <svg viewBox="0 0 448 512" fill="currentColor" className="w-5 h-5 text-white group-hover:scale-110 transition-transform">
@@ -35,10 +35,10 @@ const Footer = () => {
           <div>
             <h3 className="font-display text-lg font-semibold mb-4 text-white">Quick Links</h3>
             <nav className="flex flex-col space-y-3">
-              <Link to="/" className="text-white/80 hover:text-white transition-smooth">Home</Link>
-              <Link to="/about" className="text-white/80 hover:text-white transition-smooth">About Us</Link>
-              <Link to="/contact" className="text-white/80 hover:text-white transition-smooth">Contact</Link>
-              <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-smooth">Book via WhatsApp</a>
+              <Link to="/" className="text-white/80 hover:text-lemon transition-smooth">Home</Link>
+              <Link to="/about" className="text-white/80 hover:text-lemon transition-smooth">About Us</Link>
+              <Link to="/contact" className="text-white/80 hover:text-lemon transition-smooth">Contact</Link>
+              <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-lemon transition-smooth">Book via WhatsApp</a>
             </nav>
           </div>
 
@@ -52,7 +52,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-white" />
-                <a href="mailto:annsluxapartments@gmail.com" className="text-white/80 hover:text-white transition-colors">annsluxapartments@gmail.com</a>
+                <a href="mailto:annsluxapartments@gmail.com" className="text-white/80 hover:text-lemon transition-colors">annsluxapartments@gmail.com</a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-white" />

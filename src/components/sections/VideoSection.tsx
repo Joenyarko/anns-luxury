@@ -80,7 +80,7 @@ const VideoSection = () => {
           <div className="absolute bottom-6 right-6 flex items-center gap-4 z-20">
             <button
               onClick={toggleMute}
-              className="p-3 rounded-full bg-black/40 backdrop-blur-md border border-white/10 text-white hover:bg-primary/20 hover:text-primary transition-colors"
+              className="p-3 rounded-full bg-black/40 backdrop-blur-md border border-white/10 text-white hover:bg-lemon/20 hover:text-lemon transition-colors"
               title={isMuted ? "Unmute" : "Mute"}
             >
               {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}

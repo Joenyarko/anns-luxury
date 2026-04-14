@@ -54,7 +54,7 @@ const HeroSection = () => {
                </div>
                <div className="flex flex-col text-left">
                  <span className="text-white/70 text-[10px] uppercase tracking-widest font-bold">Talk to us</span>
-                 <span className="text-white text-sm font-medium leading-snug group-hover:text-primary transition-colors">
+                 <span className="text-white text-sm font-medium leading-snug group-hover:text-lemon transition-colors">
                     Call Now
                  </span>
                </div>

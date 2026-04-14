@@ -49,7 +49,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Phone / WhatsApp</h3>
                       <p className="text-muted-foreground">054 794 4813</p>
-                      <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm font-medium mt-1 inline-block">
+                      <a href="https://wa.me/233547944813" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-lemon hover:underline text-sm font-medium mt-1 inline-block transition-colors">
                         Message us on WhatsApp
                       </a>
                     </div>
@@ -62,7 +62,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Email directly</h3>
                       <p className="text-muted-foreground">annsluxapartments@gmail.com</p>
-                      <a href="mailto:annsluxapartments@gmail.com" className="text-primary hover:underline text-sm font-medium mt-1 inline-block">
+                      <a href="mailto:annsluxapartments@gmail.com" className="text-primary hover:text-lemon hover:underline text-sm font-medium mt-1 inline-block transition-colors">
                         Send an email
                       </a>
                     </div>
@@ -91,11 +91,11 @@ const Contact = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <label className="text-sm font-medium">First Name</label>
-                        <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="John" />
+                        <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-lemon focus:border-lemon transition-all outline-none" placeholder="John" />
                       </div>
                       <div className="space-y-2">
                         <label className="text-sm font-medium">Last Name</label>
-                        <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="Doe" />
+                        <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-lemon focus:border-lemon transition-all outline-none" placeholder="Doe" />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

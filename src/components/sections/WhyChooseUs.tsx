@@ -44,8 +44,8 @@ const WhyChooseUs = () => {
               className="text-center group animate-slide-up"
               style={{animationDelay: `${index * 0.1}s`}}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6 group-hover:bg-primary group-hover:shadow-gold transition-luxury">
-                <feature.icon className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-luxury" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6 group-hover:bg-lemon group-hover:shadow-gold transition-luxury">
+                <feature.icon className="h-8 w-8 text-primary group-hover:text-primary transition-luxury" />
               </div>
               
               <h3 className="font-display text-xl font-semibold mb-3">{feature.title}</h3>
