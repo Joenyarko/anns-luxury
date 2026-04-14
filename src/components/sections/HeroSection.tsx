@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Play, ShieldCheck, Star, Sun, Wind, Users, Bed, Zap, Phone } from "lucide-react"
 import livingroom from "@/assets/Anns-luxury/livingroom.jpg"
+import buildingcompound from "@/assets/Anns-luxury/buildingcompound.jpg"
 
 const HeroSection = () => {
   const scrollToDetails = () => {
@@ -14,10 +15,20 @@ const HeroSection = () => {
     <section id="hero" className="relative bg-primary min-h-screen pt-24 pb-16 lg:pt-32 lg:pb-32 overflow-hidden flex items-center">
       <div className="container mx-auto px-4 lg:px-8 xl:px-16 relative z-10 w-full grid grid-cols-1 lg:grid-cols-[1fr_1.5fr_1fr] gap-12 lg:gap-8 items-center mt-8">
         
-        {/* COLUMN 1 - IMAGE (Left on Desktop, 2nd on Mobile) */}
-        <div className="relative w-full flex items-center justify-center lg:justify-start animate-fade-in order-2 lg:order-1">
-           <div className="relative w-full aspect-square sm:aspect-video lg:aspect-square bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10">
-               <img src={livingroom} alt="Living Room" className="absolute inset-0 w-full h-full object-cover" />
+        {/* COLUMN 1 - DUAL OVERLAPPING IMAGES (Left on Desktop, 2nd on Mobile) */}
+        <div className="relative w-full flex items-center justify-center lg:justify-start animate-fade-in order-2 lg:order-1 pt-8 lg:pt-0">
+           <div className="relative w-[280px] sm:w-[350px] lg:w-[400px] h-[380px] sm:h-[450px] lg:h-[550px]">
+               {/* Back Image (Building Compound) */}
+               <div className="absolute top-0 left-0 w-[85%] h-[85%] bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10 shadow-2xl transition-transform hover:scale-105 duration-500">
+                   <img src={buildingcompound} alt="Building Compound" className="w-full h-full object-cover" />
+               </div>
+
+               {/* Front Image (Living Room) - Overlapping */}
+               <div className="absolute bottom-0 right-0 w-[85%] h-[85%] bg-black/50 border border-white/20 overflow-hidden rounded-2xl z-20 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform hover:scale-105 duration-500 translate-x-4 translate-y-4 lg:translate-x-8 lg:translate-y-8">
+                   <img src={livingroom} alt="Living Room" className="w-full h-full object-cover" />
+                   {/* Glass Effect Overlay */}
+                   <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent pointer-events-none" />
+               </div>
            </div>
         </div>
 
