@@ -1,8 +1,8 @@
 import { Star, Quote } from "lucide-react"
 import { cn } from "@/lib/utils"
-import review1 from "@/assets/anns-review1.png"
-import review2 from "@/assets/anns-review2.png"
-import review3 from "@/assets/anns-review3.png"
+import review1 from "@/assets/Anns-luxury/customer1.png"
+import review2 from "@/assets/Anns-luxury/customer2.png"
+import review3 from "@/assets/Anns-luxury/customer3.png"
 
 const reviews = [
   {

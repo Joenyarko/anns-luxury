@@ -1,5 +1,8 @@
 import { cn } from "@/lib/utils"
 import bedroom from "@/assets/Anns-luxury/bedroom.jpg"
+import customer1 from "@/assets/Anns-luxury/customer1.png"
+import customer2 from "@/assets/Anns-luxury/customer2.png"
+import customer3 from "@/assets/Anns-luxury/customer3.png"
 
 const stats = [
   { value: "500+", label: "Happy guests in total" },
@@ -18,13 +21,13 @@ const StatsSection = () => {
           <div className="flex items-center gap-6">
             <div className="flex -space-x-4">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-500 border-2 border-[#040B14] overflow-hidden flex-shrink-0 z-30">
-                <img src="https://i.pravatar.cc/100?img=33" alt="Client" className="w-full h-full object-cover" />
+                <img src={customer1} alt="Client" className="w-full h-full object-cover" />
               </div>
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-400 border-2 border-[#040B14] overflow-hidden flex-shrink-0 z-20">
-                <img src="https://i.pravatar.cc/100?img=47" alt="Client" className="w-full h-full object-cover" />
+                <img src={customer2} alt="Client" className="w-full h-full object-cover" />
               </div>
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-300 border-2 border-[#040B14] overflow-hidden flex-shrink-0 z-10">
-                <img src="https://i.pravatar.cc/100?img=12" alt="Client" className="w-full h-full object-cover" />
+                <img src={customer3} alt="Client" className="w-full h-full object-cover" />
               </div>
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center flex-shrink-0 z-0 relative ml-[-12px]">
                 <span className="text-[10px] md:text-xs font-bold text-black leading-none">100+</span>
