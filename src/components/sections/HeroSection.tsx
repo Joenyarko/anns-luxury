@@ -12,13 +12,19 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative bg-primary min-h-screen pt-24 pb-16 lg:pt-32 lg:pb-32 overflow-hidden flex items-center">
-      <div className="container mx-auto px-4 lg:px-8 xl:px-16 relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center mt-8">
+      <div className="container mx-auto px-4 lg:px-8 xl:px-16 relative z-10 w-full grid grid-cols-1 lg:grid-cols-[1fr_1.5fr_1fr] gap-12 lg:gap-8 items-center mt-8">
         
-        {/* LEFT COLUMN - TEXT CONTENT */}
-        <div className="max-w-xl animate-fade-in flex flex-col items-start text-left">
-          
-          <h1 className="font-display font-medium text-5xl sm:text-6xl md:text-7xl lg:text-[4.5rem] xl:text-[5rem] leading-[1.1] tracking-tight text-white mb-4">
-            <span className="block mb-2 text-4xl sm:text-5xl md:text-6xl">Welcome to</span>
+        {/* COLUMN 1 - IMAGE (Left on Desktop, 2nd on Mobile) */}
+        <div className="relative w-full flex items-center justify-center lg:justify-start animate-fade-in order-2 lg:order-1">
+           <div className="relative w-full aspect-square sm:aspect-video lg:aspect-square bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10">
+               <img src={livingroom} alt="Living Room" className="absolute inset-0 w-full h-full object-cover" />
+           </div>
+        </div>
+
+        {/* COLUMN 2 - TEXT CONTENT (Middle on Desktop, 1st on Mobile) */}
+        <div className="max-w-xl mx-auto animate-fade-in flex flex-col items-center text-center order-1 lg:order-2">
+          <h1 className="font-display font-medium text-4xl sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-[4rem] leading-[1.1] tracking-tight text-white mb-4">
+            <span className="block mb-2 text-3xl sm:text-4xl md:text-5xl">Welcome to</span>
             <span className="font-bold text-[#E2FF4A] block">
               Ann's Luxury <br className="hidden lg:block" /> Apartment
             </span>
@@ -28,12 +34,12 @@ const HeroSection = () => {
             Your luxury short stay in Accra
           </p>
 
-          <p className="text-white/80 text-base md:text-lg font-light mb-10 max-w-md leading-relaxed">
+          <p className="text-white/80 text-sm md:text-base font-light mb-10 max-w-sm leading-relaxed">
             Experience the pinnacle of comfort in our premium serviced apartment.
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8 w-full sm:w-auto mt-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 w-full sm:w-auto mt-4">
             <Button 
               variant="default" 
               onClick={scrollToDetails} 
@@ -42,7 +48,7 @@ const HeroSection = () => {
               Get Started
             </Button>
             
-            <a href="tel:+233547944813" className="flex items-center gap-4 cursor-pointer group w-full sm:w-auto justify-center sm:justify-start">
+            <a href="tel:+233547944813" className="flex items-center gap-4 cursor-pointer group w-full sm:w-auto justify-center">
                <div className="w-14 h-14 rounded-full bg-black/40 border border-white/20 flex items-center justify-center group-hover:bg-black/60 transition-colors shadow-lg">
                   <Phone className="text-[#E2FF4A] w-5 h-5" fill="none" />
                </div>
@@ -56,38 +62,29 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* RIGHT COLUMN - FEATURES LIST AND IMAGE */}
-        <div className="relative w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between animate-fade-in mt-16 lg:mt-0 gap-8">
-           
-           {/* Features List Arranged in the Middle - No Overlap */}
-           <div className="flex flex-col gap-3 w-full lg:w-auto max-w-sm lg:flex-1 order-2 lg:order-1">
-              {[
-                { icon: ShieldCheck, title: "100% Security", label: "Premium" },
-                { icon: Wind, title: "Relax in AC Sitting Room", label: "Comfort" },
-                { icon: Users, title: "Space for Family & Friends", label: "Perfect" },
-                { icon: Bed, title: "Sleep in Comfort", label: "Bed" },
-                { icon: Zap, title: "24 Hour Electricity", label: "Electricity" }
-              ].map((item, idx) => (
-                <div 
-                  key={idx} 
-                  className="bg-[#011422] border border-white/10 p-4 flex items-center gap-4 rounded-xl shadow-2xl transition-all hover:translate-x-[10px] duration-300"
-                  style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
-                >
-                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
-                    <item.icon className="text-[#E2FF4A] w-5 h-5" />
-                  </div>
-                  <div className="flex flex-col text-left">
-                    <span className="text-white font-bold text-sm tracking-wide">{item.title}</span>
-                    <span className="text-white/40 text-[10px] uppercase tracking-widest">{item.label}</span>
-                  </div>
-                </div>
-              ))}
-           </div>
-
-           {/* Image Container on the Far Right */}
-           <div className="relative w-full lg:w-[75%] xl:w-[70%] h-[350px] sm:h-[450px] lg:h-[550px] bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10 shrink-0 order-1 lg:order-2">
-               <img src={livingroom} alt="Living Room" className="absolute inset-0 w-full h-full object-cover" />
-           </div>
+        {/* COLUMN 3 - FEATURES LIST (Right on Desktop, 3rd on Mobile) */}
+        <div className="flex flex-col gap-3 w-full animate-fade-in order-3 lg:order-3">
+          {[
+            { icon: ShieldCheck, title: "100% Security", label: "Premium" },
+            { icon: Wind, title: "Relax in AC Sitting Room", label: "Comfort" },
+            { icon: Users, title: "Space for Family & Friends", label: "Perfect" },
+            { icon: Bed, title: "Sleep in Comfort", label: "Bed" },
+            { icon: Zap, title: "24 Hour Electricity", label: "Electricity" }
+          ].map((item, idx) => (
+            <div 
+              key={idx} 
+              className="bg-[#011422] border border-white/10 p-4 flex items-center gap-4 rounded-xl shadow-2xl transition-all hover:translate-x-[10px] duration-300"
+              style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
+            >
+              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                <item.icon className="text-[#E2FF4A] w-5 h-5" />
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="text-white font-bold text-xs sm:text-sm tracking-wide">{item.title}</span>
+                <span className="text-white/40 text-[9px] sm:text-[10px] uppercase tracking-widest">{item.label}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
