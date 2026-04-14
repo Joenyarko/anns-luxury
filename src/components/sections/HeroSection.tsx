@@ -56,16 +56,11 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* RIGHT COLUMN - IMAGE AND FEATURES LIST */}
+        {/* RIGHT COLUMN - FEATURES LIST AND IMAGE */}
         <div className="relative w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between animate-fade-in mt-16 lg:mt-0 gap-8">
            
-           {/* Image Container */}
-           <div className="relative w-full lg:w-[75%] xl:w-[70%] h-[350px] sm:h-[450px] lg:h-[550px] bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10 shrink-0">
-               <img src={livingroom} alt="Living Room" className="absolute inset-0 w-full h-full object-cover" />
-           </div>
-
-           {/* Features List Arranged on Right Side - No Overlap */}
-           <div className="flex flex-col gap-3 w-full lg:w-auto max-w-sm lg:flex-1">
+           {/* Features List Arranged in the Middle - No Overlap */}
+           <div className="flex flex-col gap-3 w-full lg:w-auto max-w-sm lg:flex-1 order-2 lg:order-1">
               {[
                 { icon: ShieldCheck, title: "100% Security", label: "Premium" },
                 { icon: Wind, title: "Relax in AC Sitting Room", label: "Comfort" },
@@ -87,6 +82,11 @@ const HeroSection = () => {
                   </div>
                 </div>
               ))}
+           </div>
+
+           {/* Image Container on the Far Right */}
+           <div className="relative w-full lg:w-[75%] xl:w-[70%] h-[350px] sm:h-[450px] lg:h-[550px] bg-black/50 border border-white/10 overflow-hidden rounded-2xl z-10 shrink-0 order-1 lg:order-2">
+               <img src={livingroom} alt="Living Room" className="absolute inset-0 w-full h-full object-cover" />
            </div>
         </div>
       </div>
