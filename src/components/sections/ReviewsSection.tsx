@@ -42,7 +42,7 @@ const ReviewCard = ({ review, idx }: { review: typeof reviews[0], idx: number })
   return (
     <div 
       className={cn(
-        "bg-white p-8 rounded-3xl shadow-elegant border border-border/50 hover:border-primary/30 transition-all duration-500 group relative overflow-hidden flex flex-col h-full",
+        "bg-white p-8 rounded-3xl shadow-elegant border border-border/50 hover:border-primary/30 transition-all duration-500 group relative overflow-hidden flex flex-col",
         "animate-slide-up"
       )}
       style={{ animationDelay: `${idx * 150}ms` }}
@@ -53,14 +53,14 @@ const ReviewCard = ({ review, idx }: { review: typeof reviews[0], idx: number })
       </div>
 
       <div className="relative z-10 flex flex-col h-full">
-        <div className="flex mb-6">
+        <div className="flex mb-6 text-lemon">
           {[...Array(review.rating)].map((_, i) => (
-            <Star key={i} size={16} className="fill-[#E2FF4A] text-[#E2FF4A] mr-1" />
+            <Star key={i} size={16} className="fill-current text-current mr-1" />
           ))}
         </div>
 
         <div className="flex-1">
-          <p className="text-muted-foreground italic text-lg mb-6 leading-relaxed flex-grow whitespace-pre-line">
+          <p className="text-muted-foreground italic text-lg mb-6 leading-relaxed flex-grow whitespace-pre-line min-h-[140px]">
             "{displayQuote}"
           </p>
           
@@ -79,16 +79,16 @@ const ReviewCard = ({ review, idx }: { review: typeof reviews[0], idx: number })
         </div>
 
         <div className="flex items-center space-x-4 mt-auto pt-6 border-t border-border/10">
-          <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-[#E2FF4A]/20 p-0.5 bg-white shrink-0 shadow-sm">
+          <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-lemon/20 p-0.5 bg-white shrink-0 shadow-sm">
             <img 
               src={review.image} 
               alt={review.name} 
               className="w-full h-full object-cover rounded-full"
             />
           </div>
-          <div className="min-w-0">
-            <h4 className="font-display font-bold text-lg truncate">{review.name}</h4>
-            <p className="text-primary text-[10px] font-bold uppercase tracking-wider">{review.role}</p>
+          <div className="min-w-0 text-left">
+            <h4 className="font-display font-bold text-lg truncate text-primary">{review.name}</h4>
+            <p className="text-primary opacity-60 text-[10px] font-bold uppercase tracking-wider">{review.role}</p>
           </div>
         </div>
       </div>
@@ -110,10 +110,10 @@ const ReviewsSection = () => {
             <span className="text-primary font-bold text-[10px] uppercase tracking-[0.2em]">Testimonials</span>
           </div>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-primary tracking-tight">What Our Guests Say</h2>
-          <div className="w-24 h-1.5 bg-[#E2FF4A] mx-auto rounded-full" />
+          <div className="w-24 h-1.5 bg-lemon mx-auto rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 items-start">
           {reviews.map((review, idx) => (
             <ReviewCard key={review.id} review={review} idx={idx} />
           ))}
