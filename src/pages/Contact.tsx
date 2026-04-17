@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import { Button } from "@/components/ui/button"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
+import airbnbbed2 from "@/assets/Anns-luxury/airbnbbed2.jpg"
 
 const Contact = () => {
   return (
@@ -13,7 +14,7 @@ const Contact = () => {
         <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&h=900&fit=crop" 
+              src={airbnbbed2} 
               alt="Contact Us" 
               className="w-full h-full object-cover"
             />
