@@ -28,10 +28,23 @@ const Contact = () => {
     });
 
     try {
-      const result = await emailjs.sendForm(
+      // Gather form data manually to match Template variables accurately
+      const formData = new FormData(form.current);
+      const templateParams = {
+        from_name: `${formData.get('first_name')} ${formData.get('last_name')}`,
+        from_email: formData.get('user_email'),
+        from_contact: formData.get('user_phone'),
+        message: formData.get('message'),
+        // These match the right-hand side settings in the screenshot (name, email)
+        name: `${formData.get('first_name')} ${formData.get('last_name')}`,
+        email: formData.get('user_email'),
+        subject: `New Inquiry from ${formData.get('first_name')}`
+      };
+
+      const result = await emailjs.send(
         'service_mo4u974',
         'template_tem73d5',
-        form.current,
+        templateParams,
         '7Idb3lc2PH_BMLnAM'
       );
 
