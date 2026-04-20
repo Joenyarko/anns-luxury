@@ -157,7 +157,18 @@ const Contact = () => {
                       </div>
                       <div className="space-y-2">
                         <label className="text-sm font-medium">Phone Number</label>
-                        <input name="user_phone" type="tel" required className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="+1 (555) 000-0000" />
+                        <input 
+                          name="user_phone" 
+                          type="tel" 
+                          required 
+                          pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$"
+                          onInput={(e) => {
+                            const target = e.target as HTMLInputElement;
+                            target.value = target.value.replace(/[^0-9+\-() ]/g, '');
+                          }}
+                          className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" 
+                          placeholder="+233 54 794 4813" 
+                        />
                       </div>
                     </div>
                     <div className="space-y-2">
