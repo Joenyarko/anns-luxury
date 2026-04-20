@@ -3,9 +3,60 @@ import Footer from "@/components/layout/Footer"
 import { Button } from "@/components/ui/button"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 import airbnbbed2 from "@/assets/Anns-luxury/airbnbbed2.jpg"
+import { useRef, useState } from "react"
+import emailjs from "@emailjs/browser"
+import Swal from "sweetalert2"
 
 const Contact = () => {
-  return (
+  const form = useRef<HTMLFormElement>(null);
+  const [isSending, setIsSending] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.current) return;
+
+    setIsSending(true);
+
+    // Show loading alert
+    Swal.fire({
+      title: 'Sending Inquiry...',
+      text: 'Please wait while we process your request.',
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      }
+    });
+
+    try {
+      const result = await emailjs.sendForm(
+        'service_mo4u974',
+        'template_tem73d5',
+        form.current,
+        '7Idb3lc2PH_BMLnAM'
+      );
+
+      if (result.text === 'OK') {
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent!',
+          text: 'Thank you for your inquiry. We will get back to you shortly.',
+          confirmButtonColor: '#0F172A',
+        });
+        form.current.reset();
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Submission Failed',
+        text: 'Something went wrong. Please try again or contact us via WhatsApp.',
+        confirmButtonColor: '#0F172A',
+      });
+    } finally {
+      setIsSending(false);
+    }
+  };
+
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
@@ -88,35 +139,41 @@ const Contact = () => {
               <div className="lg:w-2/3 animate-scale-in">
                 <div className="bg-white rounded-3xl shadow-elegant p-8 border border-border">
                   <h3 className="font-display text-2xl font-bold mb-6">Direct Booking Inquiry</h3>
-                  <div className="space-y-4">
+                  <form ref={form} onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <label className="text-sm font-medium">First Name</label>
-                        <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-lemon focus:border-lemon transition-all outline-none" placeholder="John" />
+                        <input name="first_name" type="text" required className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-lemon focus:border-lemon transition-all outline-none" placeholder="John" />
                       </div>
                       <div className="space-y-2">
                         <label className="text-sm font-medium">Last Name</label>
-                        <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-lemon focus:border-lemon transition-all outline-none" placeholder="Doe" />
+                        <input name="last_name" type="text" required className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-lemon focus:border-lemon transition-all outline-none" placeholder="Doe" />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <label className="text-sm font-medium">Email Address</label>
-                        <input type="email" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="john@example.com" />
+                        <input name="user_email" type="email" required className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="john@example.com" />
                       </div>
                       <div className="space-y-2">
                         <label className="text-sm font-medium">Phone Number</label>
-                        <input type="tel" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="+1 (555) 000-0000" />
+                        <input name="user_phone" type="tel" required className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="+1 (555) 000-0000" />
                       </div>
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-medium">Message</label>
-                      <textarea rows={5} className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none resize-none" placeholder="How can we help you? Let us know your planned dates..."></textarea>
+                      <textarea name="message" required rows={5} className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none resize-none" placeholder="How can we help you? Let us know your planned dates..."></textarea>
                     </div>
-                    <Button variant="luxury" size="xl" className="w-full gap-2 mt-4 text-lg">
-                      <Send size={18} /> Send Message
+                    <Button 
+                      type="submit" 
+                      variant="luxury" 
+                      size="xl" 
+                      className="w-full gap-2 mt-4 text-lg"
+                      disabled={isSending}
+                    >
+                      <Send size={18} /> {isSending ? 'Sending...' : 'Send Message'}
                     </Button>
-                  </div>
+                  </form>
               </div>
               
             </div>
