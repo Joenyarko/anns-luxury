@@ -6,6 +6,7 @@ import environImage from "@/assets/Anns-luxury/environ.jpg"
 
 const About = () => {
   const values = [
+    { title: "Luxury Amenities", description: "Ensuite rooms, AC, WiFi, smart TV, comfortable sitting room, fully equipped kitchen with fridge, washing machine, etc." },
     { title: "Exceptional Quality", description: "We believe in providing only the best furnishings and amenities." },
     { title: "Unparalleled Comfort", description: "Every detail is designed to make you feel right at home." },
     { title: "Prime Location", description: "Situated in the most sought-after neighborhood for your convenience." },
