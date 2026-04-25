@@ -3,13 +3,6 @@ import { Play, ShieldCheck, Star, Sun, Wind, Users, Bed, Zap, Phone } from "luci
 import livingroom from "@/assets/Anns-luxury/livingroom.jpg"
 
 const HeroSection = () => {
-  const scrollToDetails = () => {
-    const detailsSection = document.getElementById("apartment-details")
-    if (detailsSection) {
-      detailsSection.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     <section id="hero" className="relative bg-primary min-h-screen pt-24 pb-16 lg:pt-32 lg:pb-32 overflow-hidden flex items-center">
       <div className="container mx-auto px-4 lg:px-8 xl:px-16 relative z-10 w-full grid grid-cols-1 lg:grid-cols-[1fr_1.5fr_1fr] gap-12 lg:gap-8 items-center mt-8">
@@ -40,14 +33,6 @@ const HeroSection = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 w-full sm:w-auto mt-4">
-            <Button 
-              variant="default" 
-              onClick={scrollToDetails} 
-              className="bg-white text-black hover:bg-white/90 rounded-full px-10 h-14 font-bold tracking-widest text-xs uppercase w-full sm:w-auto shrink-0 shadow-xl hover:scale-105 transition-transform"
-            >
-              Get Started
-            </Button>
-            
             <a href="tel:+233547944813" className="flex items-center gap-4 cursor-pointer group w-full sm:w-auto justify-center">
                <div className="w-14 h-14 rounded-full bg-black/40 border border-white/20 flex items-center justify-center group-hover:bg-black/60 transition-colors shadow-lg">
                   <Phone className="text-[#E2FF4A] w-5 h-5" fill="none" />
